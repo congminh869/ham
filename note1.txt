@@ -1,0 +1,707 @@
+install cmake
+
+sudo apt remove cmake
+wget https://cmake.org/files/v3.8/cmake-3.8.2.tar.gz
+tar xf cmake-3.8.2.tar.gz
+cd cmake-3.8.2
+./configure
+sudo make install
+cmake --version                             
+--------------------------
+training dong ho voi data cu
+
+dao cat thi phong to len khong bat duoc=> data augument training
+
+ket hop dong ho + dao cat
+
+192.168.6.37
+
+manipulation 
+identity  swap  (DeepFakes)
+Deepfake Detection Challeng
+
+đợi anh thuấn để tích hợp hệ thống
+
+đồng hồ, dao cách ly: tích hợp anh Thuấn + tích hợp phần calib
+	- test với yolov5s=> fail
+	- chỉ một đồng hồ và giao cách ly trong 1 khung hình
+	- clock: name, bounding box + save image drawed
+	- giao cách ly: status, bouding_box + save image drawed
+	- output: oke
+
+phương tiện giao thông
+	-Kết hợp data
+	- vehicle : name_vehicle, bounding box + save image drawed
+
+lửa, khoi:
+	- kết hợp data => v
+	- fire : status , bouding box  + save image drawed
+	- output: oke
+
+biển số xe tối thiểu 5fps mỗi camera => 
+	- check plate đang bị sai, biển lạ không có trong dataset là không reg được, cắt nhầm viền bị nhầm thành số 1 =>v
+	- đánh giá: nhãn - dự đoán => 76% đối với từng ảnh. =>v
+	- cần kiểm tra, chạy 2 luồng code python trên máy local thì bị chậm, 
+	- thử nghiệm muntiprocess 
+	- theo dõi và lấy ra biến chính xác nhất
+	- đầu ra cả ảnh và text
+	
+	cứ bắt được là thêm vào buffer cho đến khi nó biến mất => tối da 30 biển
+	chọn biển số => xem format xuất hiện nhiều nhất => xem từng chữa rồi chọn chữ xuất hiện nhiều nhất
+	remove id
+	
+	[[id, txt_result, [x1, y1, x2, y2], cropped_img, kps, check_plate, conf]]
+	
+	dict {id: count}
+	dict {id: result}
+	
+	dict {id : dict{count: count, result : [result]}} // 
+	if id new then add new then count_id + =1, 
+	if count_id > 30 else sau n frame not appear then => send result
+	
+	//count dont apper
+	dict {id: count_dont_apper} count_dont_apper <=0 => send result
+	
+	**** đang bị tình trạng delay detect mất 4s ****
+	
+	return [frame: frame, result_plate: [id, txt, box], time: time]
+	- output: oke
+	
+
+check server hộ anh bảo =>v
+
+traing golf chia val và test => v
+
+ngày 30/11
+Create one executable file for a Flask app with PyInstaller, pyinstaller flask
+
+pyinstaller --add-data 'templates:templates' --add-data 'static:static' app.py
+
+pyarmor
+streamlit run app.py
+
+pyarmor licenses --expired 2024-12-13 r001
+pyarmor obfuscate --with-license licenses/r001/license.lic *.py
+
+pyarmor obfuscate --with-license licenses/r001/license.lic *.py
+License is expired
+
+pip3 download -r requirements.txt -d lib
+pip3 install --no-index --find-links lib -r requirements.txt
+pip install --no-index --find-links=lib/ -r requirements.txt
+
+
+pip3 download -r pycocotools.txt -d pycocotools
+pip3 install --no-index --find-links lib3 -r re.txt
+
+pip3 download -r numpy.txt -d numpy
+pip3 install --no-index --find-links numpy -r numpy.txt
+
+flask_restxcd
+flask_bcrypt
+
+
+install deb
+sudo dpkg -i packagename.deb
+uninstall deb
+sudo dpkg -r packagename.deb
+
+2: python3-distutils_3.8.10-0ubuntu1_20.04_all.deb
+1: python3-lib2to3_3.8.10-0ubuntu1_20.04_all.deb
+3: python3-setuptools_45.2.0-1_all.deb
+4: python3-wheel_0.34.2-1_all.deb
+5: python-pip-whl_20.0.2-5ubuntu1.6_all.deb
+6: python3-pip_20.0.2-5ubuntu1.6_all.deb
+
+shasum -a 256 /PATH/FILENAME
+bash ~/Downloads/Anaconda3-2020.05-Linux-x86_64.sh
+conda config --set auto_activate_base True
+source ~/.bashrc
+
+
+5/12/2022
+nvidia studio drivero
+
+7/12/2022
+mailto:
+rtsp://admin:MQ123456@192.168.6.202:554
+
+
+9/12/2022
+Segment dây đeo an toàn
+Nhận diện đồng phục bảo hộ lao động áo + mũ
+bài toán giám sát trạm biến áp: 
+	- input: ảnh+tọa độ cần theo dõi
+	- output: đối tượng ra vào phạm vi không cho phép 
+	
+	đồng phục khác=> cảnh báo
+	người+phương tiện đi ra và đi vào => cảnh báo
+	khói + lửa => cảnh báo
+
+11/12/2022
+
+phát hiện lửa nhầm: người mặc áo màu cam và đỏ, những vật có màu giống của lửa.
+
+12/12/2022
+nvm
+nvm install v16
+cd make sense
+npm intall
+npm start
+
+nvm
+nvm install v16
+cd make-sense
+npm install
+npm start
+
+
+#note install make-sense
+sudo snap install curl
+sudo curl -s https://deb.nodesource.com/setup_16.x | sudo bash
+sudo apt install nodejs -y
+
+sudo apt install curl 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+nvm install 16
+nvm use 16
+
+cd make-sense
+npm install
+npm start
+
+WIFI
+MQ@123456789
+
+15/12
+sudo apt install libcudnn8=8.4.1.50-1+cuda${CUDA_VERSION}
+8.6.0.163
+
+libcudnn8_8.4.1.50-1+cuda11.6_amd64.deb
+
+
+import paddle
+paddle.utils.run_check()
+paddle.device.cuda.device_count()
+
+
+16/12/2022
+jetson : 192.168.6.37
+lib paddle https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+
+
+18/12/2022
+làm video demo fire
+tích hợp paddle class
+
+tích hợp code Hoàng
+
+conda install paddlepaddle-gpu==2.2.2 cudatoolkit=10.1 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
+
+hỏi a Phương cách tạo tài khoản Baiducongmi!@#
+
+19/12/2022
+hỏi Hòa training yolo class
+Hoàng theo dõi mũ
+tích hợp paddle class
+training người
+code lib_debug_log()
+
+input : yolo 
+	convert => img_crop
+	fix out_put box
+
+
+python3 -m venv env
+
+21/12/1999
+#!/bin/sh
+#wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+#shasum -a 256 Anaconda3-2022.10-Linux-x86_64.sh
+#bash Anaconda3-2022.10-Linux-x86_64.sh
+#source ~/.bashrc
+#conda config --set auto_activate_base True
+#conda create -n pro python=3.8
+#conda create -n attt python=3.8
+
+sudo ap -yy install gcc
+
+sudo apt-get install python-dev default-libmysqlclient-dev libssl-dev
+conda run -n pro --live-stream pip install -r requirements_pro.txt
+conda run -n pro --live-stream conda install -c conda-forge pycocotools
+#conda run -n pro --live-stream pip install -r requirements_pro_extend.txt
+
+#install mysql-server
+sudo apt install mysql-server
+sudo systemctl start mysql.service 
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+sudo mysql -u root -p
+#create database
+
+CREATE DATABASE future_ai CHARACTER SET utf8 COLLATE utf8_general_ci;
+flask initdb
+
+
+23/1ên2/2022
+detect nguoi xử dụng muti batch phát hiện người chèo tường rào
+
+https://github.com/ultralytics/yolov5/issues/1911
+
+thứ 2 đổi lại bằng cách load model mới ở tr
+
+me
+anydesk
+370 083 732
+A12345678!@#
+
+serverAI                  
+-ssh
+ip: 192.168.6.130
+pass: 1
+-sambashare
+user: mq
+pass: 1
+-anydesk
+ip: 900 317 870
+pass: A12345678!@#
+
+#may 1
+teamview: evnadmin
+id: 1396231648
+password: adminaddfasdfdsthuan_1996
+ubuntu: 123456789
+10.11.16.198
+172.16.90.17
+anydesk: 
+173080760
+admin123456
+
+iddleware
+#may 2
+teamview: evnadmin
+id: 1396257037
+password: thuan_1996
+172.16.90.15
+
+173080760
+admin123456
+
+459576391
+admin123456
+
+
+admin
+admin123456
+
+29/12/2022
+cd thuannd/Middleware/Debug
+
+./AI_Middleware
+
+/home/minhssd/thuannd/python_AI_client/client_AI_example_2.py
+
+30/12/2022
+tích hợp m
+
+
+3/1/2023
+dao cách ly
+trạng thái đồng hồ
+
+*Test case hoà bình
+   Kịch bản nhiệm thu.
+   Đưa ra các test case.
+
+   Dây phải nhìn rõ khoảng cách bao nhiêu phòng chống các case ngẫu nhiên.
+
+   1 khách hàng đồng ý.
+   Và mình đáp ứng được.
+
+  => tất cả vào test.
+
+*Future 
+   Video : hành động , công cụ label.
+   Âm thanh: nhận diện cơ bản biến đổi âm      thanh thành hình ảnh rồi phân loại.
+   Hiếu: phần log, tích hợp, âm thanh.
+
+*Thuỷ điện hoà bình
+        Tích hợp
+        Thu thập data
+        Quai đeo đồng phục
+
+ *Golf
+   Tracking cú đánh
+      Khung sương dự đoán cú đánh, tính điểm
+      Một view thẳng và 1 view ngang=> tính toán sự đồng bộ không gian và thời gian
+      Chạy trên ios
+      => Sơn
+
+*Nghiên cứu khoa học
+    Tổng hợp tài liệu.
+     Kịch bản lấy mẫu cho từng bài toán 1.
+    Đánh giá và đưa ra các bước tiếp theo.
+
+    Tóm lược video tự động.
+    
+*Huyết học
+   Cmt: đánh giá lại và cải thiện
+   Khuôn mặt:
+   98 99% mới ổn
+   => Việt, Minh
+   => ổn đinh data, góc nghiêng, nguồn sáng, tối ưu nhất và thuận tiện nhất cho người dùng.
+   
+*đường dây cột điện
+	tính được 
+
+
+############################4/1/2022
+# viết các test case 
+# kiểm tra lại luồng code
+
+openmp python
+https://scicomp.aalto.fi/triton/examples/python/python_openmp/python_openmp/
+
+# test paddle class 1 img and 10 img
+
+phòng gym: 
+	Rainbow Fitness: Tầng 22, Toà nhà Rainbow Linh Đàm, P. Hoàng Liệt, Q. Hoàng Mai, TP Hà Nội
+
+
+
+https://inhat.vn/ha-noi/dich-vu-ha-noi/phong-tap-gym-quan-hoang-mai-ha-noi/
+ 1, 6, 9, 15, 
+ 
+############################5/1/2022
+# viết các test case 
+# code lại multi detect biển số, xem lại và chạy code cũ
+
+
+############################9/1/2022
+Viết các test case 
+tìm tài liệu tensorrt: gửi Sơn
+code thêm phần vào ra trong giám sát thi công: mở chiều rộng biên giới khu vực
+
+code lại multi detect biển số
+phân tích bài toán đường đây điện
+
+###########################10/1/2022
+Viết các test case 
+phân tích bài toán đường đây điện138, 140, 141 lỗi ko xem đc 
+code thêm phần vào ra trong giám sát thi công: mở chiều rộng biên giới khu vực: tùy vào tốc độ của nguời di chuyern và fps
+https://stackoverflow.com/questions/49529372/force-gpu-memory-limit-in-pytorch
+###########################11/1/2022
+resnet50 : tensorrt
+chiều cao của tham thực vật.
+
+change gpu id: 
+paddleOCR: ./PaddleOCR/tools/infer/utility.py : get_infer_gpuid set int  : config.enable_use_gpu(args.gpu_mem, gpu_id)
+
+models_retina.py device int : self.device
+device = paddle.set_device('gpu:1') : MobileNetV1_multilabel.yaml device: gpu:0 or 1
+
+
+###########################17/1/2022
+
+############################31/1/2023###################################
+tìm hiểu chatGPT
+segmentation: đọc lý thuyết, chạy ví dụ
+seg2seg, cơ chế attention, self-attention
+mô hình transformer, BERT, GPT, ChatGPT
+
+
+
+camera: 192.168.6.132
+
+viết file config cho biển số x
+
+########################6/2/2023#############
+
+############################7/2/2023###################################
+
+############################8/2/2023###################################
+
+############################14/2/2023###################################
+echo "# myCV1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/congminh869/myCV1.git
+git push -u origin main
+
+char *a{nullptr}
+
+
+mô tả: để test tính năng ... b1, b2, b3 thao tác cả hệ thống
+kết quả: VMS
+
+test person kiểm tra map
+nếu người đi gần biên thì ko xét đồng phục nữa
+
+
+output không đội mũ và output ko mặc đồng phục => ra output ko đúng vị tri
+
+tuần sau test đươc tính năng AI trong hầm
+
+cái nào ko đáp ứng phhai lươn lẹo hướng dẫn người dùng hiểu theo nghĩa kh
+
+có 1 luồng tạo config cứ thế mà làm: 1 biến chứa tất cả các thông t
+giám sát khu vực giờ là Polygon.							
+
+
+199 117 225 146 
+smb://192.168.6.130/sambashare/Videos/your_video6.avi
+
+
+
+alo a 
+ffmpeg -i '<rtsp://admin:admin123@172.16.89.114:554>' -vcodec out.mp4
+rtsp://admin:admin123@172.16.89.100:554
+
+ffmpeg -i '<rtsp://admin:admin123@172.16.89.105:554>' -vcodec out.mp4
+
+ffmpeg -i 'rtsp://admin:admin123456@172.16.89.161:554' -vcodec h264 ./out161.mp4
+
+
+nhìn đepj nhưng lại ngủ muồn rồi
+###################################22/2/2023
+sudo ln -s ./libcuda.so.1 ./libcuda.so : create link to make file understand => cannot find -lcuda
+libprotobuf-dev
+sudo apt-get install -y libgif-dev
+sudo apt-get install -y libmosquittopp-dev
+
+NVR_ch3_main_20230219140000_20230219150000.mp4
+
+hệ thống không ổn định bắt thời gian ko hợp lý sort có thể bị xóa
+
+
+check lỗi 
+ uniform khi ko có ảnh
+
+nhận ảnh tính featue 
+
+có nhiều face thì cảnh báo và lấy face ở giữa or to nhất
+
+chuyen nguyen anh => giu lại code thành
+###################################22/2/2023
+{'box': [522, 730, 605, 771], 'confidence': 0.9999998807907104, 'keypoints': {'left_eye': (695, 1019), 'right_eye': (994, 1030), 'nose': (838, 1147), 'mouth_left': (702, 1319), 'mouth_right': (957, 1331)}}
+
+
+
+
+
+#################################14/3
+
+###############################16/3/2023#############################
+
+
+
+
+###################17/3/1023############
+edit video
+Openshot
+
+
+đóng lib thư viện yolo và retinaface
+test độ chính xác
+	lấy khu vực
+	đọc lại các sự kiện trả về 
+	lưu các sự kiện trả về để xem có cảnh báo đúng ko
+người mang vật thể
+
+python test_models.py something \
+    --weights=pretrained/TSM_kinetics_RGB_mobilenetv2_shift8_blockres_avg_segment8_e100_dense.pth \
+    --test_segments=8 --batch_size=72 -j 24 --test_crops=1
+    
+    
+python test_models.py kinetics \
+    --weights=pretrained/TSM_kinetics_RGB_mobilenetv2_shift8_blockres_avg_segment8_e100_dense.pth \
+    --test_segments=8 --test_crops=1 \
+    --batch_size=64
+    
+    /home/minhssd/AI_hoabinh/yoloHubLoad/License_Plate/PaddleOCR/rec_lp_lite_80x240_only_reg_plate_training_d4m4y2023/en_dict.txt
+
+
+########################################################
+cmake
+make -j$(nproc)
+
+###################################################
+chuyển các bài toán pt sang engine
+		giám sát
+		Hàng rào
+	=> đang gặp vấn đề là size ảnh phải resize trước khi cho vào model => cần xác định vị trí và convert về lại      V
+Biển số xe thì chuyển code sang thư viện cpp
+test lại toàn bộ độ chính xác
+thêm code đồng hồ, dao cắt
+code riêng một đoạn code cho tổ máy 1 và tổ máy cuối có mũ để đề phòng khách du lịch đi vào tổ máy
+bắt buộc phải sort thêm vào không thì cảnh bảo bừa => liên tục
+đẩy ngưỡng detect người lên 0.7
+
+=====================tránh trường hợp spam cảnh báo: xem id nếu trùng id thì giới hạn số lần
+viet code test camera thực tế
+
+sửa code hàng rào để khoanh vung
+
+########đóng lib thư viện cpp face############
+smb://192.168.6.130/sambashare/face_detect_module/build_lib : camke .. => make
+smb://192.168.6.130/sambashare/face_detect_module: make
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/mq/face_detect_module/build_lib => export file .so => source ~/.bashrc
+
+make => .cxx, .o => .so
+opencv-swig 
+
+đang phải build riêng 2 thư viện cu và cpp bởi vì đang bị lỗi xung độ hệ thống chưa fix đc
+
+muốn dùng thì phải copy: example.py, FaceDetect.py, _FaceDetect.so
+
+export LD_LIBRARY_PATH=./face_detect_module/build_lib/
+
+swig convert c++ to python
+######################################
+test 1 video trước xem code ổn chưa
+
+
+
+smb://192.168.6.130/sambashare/Documents/AI_hoabinh/yoloHubLoadv2
+
+
+
+#######
+văn
+chi
+cong
+
+####
+
+AI_middkeware => main.py => init_VideoIOContext => sua type 
+
+vào thư mục lưu trữ video => ffmpeg -i output_.mp4 -vcodec copy output_.mkv -y => convert về mkv 
+live555MediaServer ./output_.mkv #live lien tuc
+
+run /home/evnadmin/Desktop/AI_Middleware_Py2/main.py : đợi 2 đến 3 phút
+
+run main_AI.py
+
+ffmpeg -ss 00:17:15 -to 00:17:30 -i video_test.mkv -c copy plate5.mkv
+
+ffmpeg -ss 00:00:00 -to 00:01:45 -i 30_05_23_11_22_54_790943.avi -c copy 1.avi
+ffmpeg -i "concat:1.avi|2.avi|3.avi|4.avi|5.avi|6.avi|7.avi|8.avi|9.avi|10.avi|11.avi|12.avi" -c copy output.avi
+# sửa ip camera 
+
+
+
+test yolov5
+git  : lửa bắt tốt nhưng chậm cần thay core
+torch
+
+người xử dụng yolov5s huẩn hơn file yolov5m nhưng mà bắt đc ít người hơn
+
+
+
+/mnt/hdd/vms/static/tmp/scada/images/19-04-2023
+https://172.16.89.17/swagger#/scada-devices/ScadaDevicesController_findAllActiveTest
+
+
+
+restart p2p
+sudo systemctl restart mq-p2p-client.service
+
+
+&proto=Onvif
+terminate called after throwing an instance of 'std::system_error'
+  what():  Resource temporarily unavailable
+Aborted (core dumped)
+
+sort
+	có di chuyển => cảnh báo
+	không di chuyển
+
+mất detect => cảnh báo
+test bị lỗi 
+
+check spam person fence
+#results.append([id, txt_result, [x1, y1, x2, y2], cropped_img, kps, check_plate, conf])
+frame_raw = draw_img(results, copy.deepcopy(frame))  
+
+
+object detection
+https://learnopencv.com/yolo-nas/
+https://github.com/PaddlePaddle/PaddleDetection/tree/develop/configs/rtdetr
+
+# lập trình hướng đối tượng
+https://www.youtube.com/watch?v=Evcb9-6T1Rk&list=PLyxSzL3F7486SaHaQayPdKJUScVFh1UwA&index=31
+https://www.youtube.com/watch?v=V85332IZVs0&list=PLyxSzL3F74875OpDlkUfsRRUktZMGkhJU
+
+-----------------------encode code using Pyarmor
+
+#2/6
+deepfake
+https://github.com/s0md3v/roop
+
+-------------------------------------AI serving
+https://github.com/bentoml/BentoML
+https://docs.bentoml.org/en/latest/concepts/index.html
+1.  Train CNN model in MNIST => run code training.py to training and save file weight
+2. save model to BentoML local store
+	bentoml models list: check models
+	bentoml models delete "tag" => run code savemodeltobento.py
+3. Create a BentoML service => bentoml serve service:mnist_service --reload
+	bentoml.sklearn.get("iris_clf:latest").to_runner() => model will automatically choose based on the available system resources
+	
+	copy tag to BENTO_MODEL_TAG
+	run: bentoml serve service:mnist_service --reload
+	after run file: servicerequest.py to use serve
+4. Build model + servive into a bento
+	cd to folder contain file .yaml
+	bentoml list : check bento service
+	bentoml build : create new bento
+	check tag using bentoml list after run: bentoml serve mnist_classifier:vb4c7cavtkufgq3i --production => test code python servicerequest.py
+5. Serve model through a bento
+6. Dockerise the bento
+7. Run bento service via Docker
+------------------------------------label anything
+https://github.com/congminh869/DIS
+
+------------------------------------docker 
+https://www.youtube.com/watch?v=bi0cKgmRuiA
+https://hub.docker.com/r/ultralytics/yolov5/dockerfile
+https://medium.com/@pranjallk1995/docker-basics-for-beginners-with-a-complete-workflow-demo-for-yolov5-part-1-ba372f60065d
+
+
+Gửi cho anh thông tin chi tiết api scada nhé, thông tin như kiểu như 
+
+- URL: http://0.0.0.0:4444/api/detectHSV
+- Method: POST
+- Request: FormData
+   +  files: [<FileStorage: '1.jpg' ('image/jpeg')>, <FileStorage: '2.jpg' ('image/jpeg')>, <FileStorage: '3.jpg' ('image/jpeg')>]
+   +  coords: {name_images : coordinates} => { "1.jpg" : [1192, 988, 1400, 1200] , "2.jpg" : [1192, 988, 1400, 1200], , "3.jpg" : [1192, 988, 1400, 1200]} => json
+   +  type: "HSV"
+- Response:  application/json
+  {
+     name: {"pathImg": [path_save_img_1, path_save_img_2, path_save_img_3], "open": [true/false/None, true/false/None, true/false/None]}
+  }
+  
+  
+- URL: http://0.0.0.0:4444/api/detectClock
+- Method: POST
+- Request: FormData
+   +  files: [<FileStorage: '1.jpg' ('image/jpeg')>, <FileStorage: '2.jpg' ('image/jpeg')>, <FileStorage: '3.jpg' ('image/jpeg')>]
+   +  type: "clock"
+- Response:  application/json
+  {
+     name: {"pathImg": [path_save_img_1, path_save_img_2, path_save_img_3], "open": [true/false/None, true/false/None, true/false/None]}
+  }
+ 
+458, 170
+491, 189
+
+309, 114
+351, 159
+
+174, 119
+280, 233
