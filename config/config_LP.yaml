@@ -1,0 +1,6 @@
+{
+  "rows_img_detect" : 1900,
+  "cols_img_detect" : 1900,
+  "device": 0,
+  "model_path" : "/home/evnadmin/Documents/AI_hoabinh/weight/mobilenet_epoch_235_plate.1900x1900.FP32.trtmodel"
+}

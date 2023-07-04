@@ -1,0 +1,6 @@
+{
+	"rows_img_detect" : 800,
+	"cols_img_detect" : 800,
+	"device": 1,
+	"model_path" : "/home/evnadmin/Documents/AI_hoabinh/weight/mb_retinaface.800x800.FP32.trtmodel"
+}

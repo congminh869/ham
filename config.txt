@@ -1,0 +1,50 @@
+{
+    "redis_client": 
+    {
+        "host" : "172.16.89.17",
+        "port" : 6379,
+        "db" : 1,
+        "acc": "",
+        "pwd" : "MQ123456"        
+    },
+    "redis_client_ai": 
+    {
+        "host" : "172.16.89.17",
+        "port" : 6379,
+        "db" : 7,
+        "acc": "",
+        "pwd" : "MQ123456"        
+    },
+    "setting_storage_out":
+    {
+        "codec" : "h264",
+        "bit_rate" : 400000,
+        "fps" : 24,
+        "width" : 1920,
+        "height" : 1080,
+        "number_video_tmp" : 60,
+        "max_sub_duration" : 60,
+        "save_dir" : "/home/mq/Videos/recoder/",
+        "save_format" : "video_%d_%d.mp4"
+    },
+    "PTZ_priority":
+    {
+        "TBA":{
+            "High": ["GS_ThietBi_DaoCachLy", "GS_ThietBi_DongHo"],
+            "Medium": ["GS_DoBaoHo_DaiAnToan"], 
+            "Low": ["GS_KhuVuc_HanChe", "GS_KhuVuc_ThiCong"],
+            "VeryLow": ["GS_HangRao"]
+            },
+        "HAM":{
+            "High": ["GS_KhuVuc_HanChe"],
+            "Medium": [], 
+            "Low": [],
+            "VeryLow": []
+            }      
+    },
+    "shm_image_size_default": {"width": 1920, "height": 1080, "depth": 3},
+    "shm_image_size_special":
+    [
+        {"ai_typ" : "", "width": 1280, "height": 720, "depth": 3}
+    ]
+ }

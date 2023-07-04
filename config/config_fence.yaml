@@ -1,0 +1,22 @@
+weights_person: #yolo_person
+  weights: 'weight/person/detect_only_person_yolov5s_70map_y2022.pt'
+  classes: 0
+  device: 1
+  iou_thres: 0.4
+  conf_thres: 0.75
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_FS
+weights_FS:
+  weights: 'weight/fire_smoke/fire-smoke-detect-yolov4.pt'
+  classes: null
+  device: 1
+  iou_thres: 0.4
+  conf_thres: 0.75
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+
+device:
+  device: 0

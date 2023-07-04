@@ -1,0 +1,2 @@
+paddleClas:
+	config file: ./PaddleClas/data/MobileNetV1_multilabel.yaml

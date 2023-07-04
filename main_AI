@@ -1,0 +1,137 @@
+Using cache found in /home/evnadmin/.cache/torch/hub/ultralytics_yolov5_master
+YOLOv5 🚀 2023-5-31 Python-3.7.16 torch-1.10.1+cu102 CUDA:0 (Tesla T4, 14928MiB)
+
+UNKNOWN: Using cuDNN as a tactic source
+UNKNOWN: Deserialization required 1002695 microseconds.
+UNKNOWN: Using cuDNN as a tactic source
+UNKNOWN: Total per-runner device persistent memory is 2795520
+UNKNOWN: Total per-runner host persistent memory is 61984
+UNKNOWN: Allocated activation device memory of size 220498432
+Fusing layers... 
+Model summary: 308 layers, 21041679 parameters, 0 gradients
+Adding AutoShape... 
+W0602 13:59:53.274689 3297709 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 12.0, Runtime API Version: 10.2
+W0602 13:59:53.278354 3297709 gpu_resources.cc:91] device: 0, cuDNN Version: 8.6.
+Process Process-2:
+Process Process-3:
+Traceback (most recent call last):
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/main_AI.py", line 256, in <module>
+Traceback (most recent call last):
+    time.sleep(5)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+Process Process-5:
+KeyboardInterrupt  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/main_AI.py", line 40, in process_Event
+    time.sleep(1)
+
+KeyboardInterrupt
+Process Process-7:
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/main_AI.py", line 94, in process_MJPEGServer
+    server.handle_request()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/socketserver.py", line 294, in handle_request
+    ready = selector.select(timeout)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_context.py", line 655, in ProcessWorker
+    ret, arr = reader_shm.Read()
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/shm/SHMReader_3.py", line 139, in Read
+    arr = self._ParserData(memory_value)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/shm/SHMReader_3.py", line 85, in _ParserData
+    count_frame_prev = self.info_channel_shm.list_cid[i]["count"]
+KeyboardInterrupt
+Process Process-11:
+Process Process-13:
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_context.py", line 527, in ProcessWorker
+    camera_demo = redis_c_demo.Get3("demo")
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/redis_client.py", line 67, in Get3
+    for key in self.r.keys():
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/commands/core.py", line 1944, in keys
+    return self.execute_command("KEYS", pattern, **kwargs)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1273, in execute_command
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1271, in <lambda>
+    conn, command_name, *args, **options
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1245, in _send_command_parse_response
+    conn.send_command(*args)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 849, in send_command
+    check_health=kwargs.get("check_health", True),
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 825, in send_packed_command
+    self._sock.sendall(item)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_context.py", line 655, in ProcessWorker
+    ret, arr = reader_shm.Read()
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/shm/SHMReader_3.py", line 138, in Read
+    memory_value = self.memory.read(self.buf_sz, offset = self.buf_sz * pos + 4)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_context.py", line 527, in ProcessWorker
+    camera_demo = redis_c_demo.Get3("demo")
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/redis_client.py", line 67, in Get3
+    for key in self.r.keys():
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/commands/core.py", line 1944, in keys
+    return self.execute_command("KEYS", pattern, **kwargs)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1273, in execute_command
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1271, in <lambda>
+    conn, command_name, *args, **options
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1246, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/client.py", line 1286, in parse_response
+    response = connection.read_response()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 874, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 347, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 357, in _read_response
+    raw = self._buffer.readline()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 260, in readline
+    self._read_from_socket()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/site-packages/redis/connection.py", line 210, in _read_from_socket
+    data = self._sock.recv(socket_read_size)
+KeyboardInterrupt
+Process Process-9:
+Traceback (most recent call last):
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/evnadmin/anaconda3/envs/hoabinhtest/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_context.py", line 713, in ProcessWorker
+    result, imgs_debug = method_ptr.Detect(dataImages, coordinate_rois, labels_allow_helmet, labels_allow_uniform)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/AI_Interface.py", line 592, in Detect
+    dict_data = self.license_Plate.detect(imgs_in, coordinate_rois, dict_data)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/License_Plate/include/onebatch.py", line 78, in detect
+    self.count_id)
+  File "/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/License_Plate/include/onebatch.py", line 723, in main_reid
+    cv2.imwrite(f'./event_plate/raw/{str(dataImages[0].cid)}.jpg', frame)
+KeyboardInterrupt

@@ -1,0 +1,3 @@
+/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/face_detect_module/build_lib/CMakeFiles/rebuild_cache.dir
+/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/face_detect_module/build_lib/CMakeFiles/edit_cache.dir
+/home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/face_detect_module/build_lib/CMakeFiles/cudaplugins.dir

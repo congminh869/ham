@@ -1,0 +1,1259 @@
+[2022/12/20 15:55:28] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2022/12/20 15:55:28] ppcls INFO: Arch : 
+[2022/12/20 15:55:28] ppcls INFO:     class_num : 10
+[2022/12/20 15:55:28] ppcls INFO:     name : MobileNetV1
+[2022/12/20 15:55:28] ppcls INFO:     pretrained : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/best_model
+[2022/12/20 15:55:28] ppcls INFO: DataLoader : 
+[2022/12/20 15:55:28] ppcls INFO:     Eval : 
+[2022/12/20 15:55:28] ppcls INFO:         dataset : 
+[2022/12/20 15:55:28] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2022/12/20 15:55:28] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 15:55:28] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 15:55:28] ppcls INFO:             transform_ops : 
+[2022/12/20 15:55:28] ppcls INFO:                 DecodeImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     channel_first : False
+[2022/12/20 15:55:28] ppcls INFO:                     to_rgb : True
+[2022/12/20 15:55:28] ppcls INFO:                 ResizeImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     resize_short : 256
+[2022/12/20 15:55:28] ppcls INFO:                 CropImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     size : [192, 256]
+[2022/12/20 15:55:28] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 15:55:28] ppcls INFO:                     order : 
+[2022/12/20 15:55:28] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 15:55:28] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 15:55:28] ppcls INFO:         loader : 
+[2022/12/20 15:55:28] ppcls INFO:             num_workers : 4
+[2022/12/20 15:55:28] ppcls INFO:             use_shared_memory : True
+[2022/12/20 15:55:28] ppcls INFO:         sampler : 
+[2022/12/20 15:55:28] ppcls INFO:             batch_size : 64
+[2022/12/20 15:55:28] ppcls INFO:             drop_last : False
+[2022/12/20 15:55:28] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 15:55:28] ppcls INFO:             shuffle : False
+[2022/12/20 15:55:28] ppcls INFO:     Train : 
+[2022/12/20 15:55:28] ppcls INFO:         dataset : 
+[2022/12/20 15:55:28] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2022/12/20 15:55:28] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 15:55:28] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 15:55:28] ppcls INFO:             transform_ops : 
+[2022/12/20 15:55:28] ppcls INFO:                 DecodeImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     channel_first : False
+[2022/12/20 15:55:28] ppcls INFO:                     to_rgb : True
+[2022/12/20 15:55:28] ppcls INFO:                 RandCropImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     size : [192, 256]
+[2022/12/20 15:55:28] ppcls INFO:                 RandFlipImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     flip_code : 1
+[2022/12/20 15:55:28] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 15:55:28] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 15:55:28] ppcls INFO:                     order : 
+[2022/12/20 15:55:28] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 15:55:28] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 15:55:28] ppcls INFO:         loader : 
+[2022/12/20 15:55:28] ppcls INFO:             num_workers : 4
+[2022/12/20 15:55:28] ppcls INFO:             use_shared_memory : True
+[2022/12/20 15:55:28] ppcls INFO:         sampler : 
+[2022/12/20 15:55:28] ppcls INFO:             batch_size : 64
+[2022/12/20 15:55:28] ppcls INFO:             drop_last : False
+[2022/12/20 15:55:28] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 15:55:28] ppcls INFO:             shuffle : True
+[2022/12/20 15:55:28] ppcls INFO: Global : 
+[2022/12/20 15:55:28] ppcls INFO:     checkpoints : None
+[2022/12/20 15:55:28] ppcls INFO:     device : gpu
+[2022/12/20 15:55:28] ppcls INFO:     epochs : 10
+[2022/12/20 15:55:28] ppcls INFO:     eval_during_train : True
+[2022/12/20 15:55:28] ppcls INFO:     eval_interval : 1
+[2022/12/20 15:55:28] ppcls INFO:     image_shape : [3, 256, 192]
+[2022/12/20 15:55:28] ppcls INFO:     output_dir : ./output/
+[2022/12/20 15:55:28] ppcls INFO:     pretrained_model : None
+[2022/12/20 15:55:28] ppcls INFO:     print_batch_step : 10
+[2022/12/20 15:55:28] ppcls INFO:     save_inference_dir : ./inference
+[2022/12/20 15:55:28] ppcls INFO:     save_interval : 1
+[2022/12/20 15:55:28] ppcls INFO:     use_multilabel : True
+[2022/12/20 15:55:28] ppcls INFO:     use_visualdl : False
+[2022/12/20 15:55:28] ppcls INFO: Infer : 
+[2022/12/20 15:55:28] ppcls INFO:     PostProcess : 
+[2022/12/20 15:55:28] ppcls INFO:         class_id_map_file : None
+[2022/12/20 15:55:28] ppcls INFO:         name : MultiLabelTopk
+[2022/12/20 15:55:28] ppcls INFO:         topk : 5
+[2022/12/20 15:55:28] ppcls INFO:     batch_size : 10
+[2022/12/20 15:55:28] ppcls INFO:     infer_imgs : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/image/
+[2022/12/20 15:55:28] ppcls INFO:     transforms : 
+[2022/12/20 15:55:28] ppcls INFO:         DecodeImage : 
+[2022/12/20 15:55:28] ppcls INFO:             channel_first : False
+[2022/12/20 15:55:28] ppcls INFO:             to_rgb : True
+[2022/12/20 15:55:28] ppcls INFO:         ResizeImage : 
+[2022/12/20 15:55:28] ppcls INFO:             resize_short : 256
+[2022/12/20 15:55:28] ppcls INFO:         CropImage : 
+[2022/12/20 15:55:28] ppcls INFO:             size : [192, 256]
+[2022/12/20 15:55:28] ppcls INFO:         NormalizeImage : 
+[2022/12/20 15:55:28] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2022/12/20 15:55:28] ppcls INFO:             order : 
+[2022/12/20 15:55:28] ppcls INFO:             scale : 1.0/255.0
+[2022/12/20 15:55:28] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2022/12/20 15:55:28] ppcls INFO:         ToCHWImage : None
+[2022/12/20 15:55:28] ppcls INFO: Loss : 
+[2022/12/20 15:55:28] ppcls INFO:     Eval : 
+[2022/12/20 15:55:28] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 15:55:28] ppcls INFO:             weight : 1.0
+[2022/12/20 15:55:28] ppcls INFO:     Train : 
+[2022/12/20 15:55:28] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 15:55:28] ppcls INFO:             weight : 1.0
+[2022/12/20 15:55:28] ppcls INFO: Metric : 
+[2022/12/20 15:55:28] ppcls INFO:     Eval : 
+[2022/12/20 15:55:28] ppcls INFO:         AccuracyScore : None
+[2022/12/20 15:55:28] ppcls INFO:         HammingDistance : None
+[2022/12/20 15:55:28] ppcls INFO:     Train : 
+[2022/12/20 15:55:28] ppcls INFO:         AccuracyScore : None
+[2022/12/20 15:55:28] ppcls INFO:         HammingDistance : None
+[2022/12/20 15:55:28] ppcls INFO: Optimizer : 
+[2022/12/20 15:55:28] ppcls INFO:     lr : 
+[2022/12/20 15:55:28] ppcls INFO:         learning_rate : 0.1
+[2022/12/20 15:55:28] ppcls INFO:         name : Cosine
+[2022/12/20 15:55:28] ppcls INFO:     momentum : 0.9
+[2022/12/20 15:55:28] ppcls INFO:     name : Momentum
+[2022/12/20 15:55:28] ppcls INFO:     regularizer : 
+[2022/12/20 15:55:28] ppcls INFO:         coeff : 4e-05
+[2022/12/20 15:55:28] ppcls INFO:         name : L2
+[2022/12/20 15:55:28] ppcls INFO: train with paddle 2.2.2 and device CUDAPlace(0)
+[2022/12/20 16:01:53] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2022/12/20 16:01:53] ppcls INFO: Arch : 
+[2022/12/20 16:01:53] ppcls INFO:     class_num : 10
+[2022/12/20 16:01:53] ppcls INFO:     name : MobileNetV1
+[2022/12/20 16:01:53] ppcls INFO:     pretrained : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/best_model
+[2022/12/20 16:01:53] ppcls INFO: DataLoader : 
+[2022/12/20 16:01:53] ppcls INFO:     Eval : 
+[2022/12/20 16:01:53] ppcls INFO:         dataset : 
+[2022/12/20 16:01:53] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2022/12/20 16:01:53] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:01:53] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:01:53] ppcls INFO:             transform_ops : 
+[2022/12/20 16:01:53] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     channel_first : False
+[2022/12/20 16:01:53] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:01:53] ppcls INFO:                 ResizeImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     resize_short : 256
+[2022/12/20 16:01:53] ppcls INFO:                 CropImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:01:53] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:01:53] ppcls INFO:                     order : 
+[2022/12/20 16:01:53] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:01:53] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:01:53] ppcls INFO:         loader : 
+[2022/12/20 16:01:53] ppcls INFO:             num_workers : 4
+[2022/12/20 16:01:53] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:01:53] ppcls INFO:         sampler : 
+[2022/12/20 16:01:53] ppcls INFO:             batch_size : 64
+[2022/12/20 16:01:53] ppcls INFO:             drop_last : False
+[2022/12/20 16:01:53] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:01:53] ppcls INFO:             shuffle : False
+[2022/12/20 16:01:53] ppcls INFO:     Train : 
+[2022/12/20 16:01:53] ppcls INFO:         dataset : 
+[2022/12/20 16:01:53] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2022/12/20 16:01:53] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:01:53] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:01:53] ppcls INFO:             transform_ops : 
+[2022/12/20 16:01:53] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     channel_first : False
+[2022/12/20 16:01:53] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:01:53] ppcls INFO:                 RandCropImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:01:53] ppcls INFO:                 RandFlipImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     flip_code : 1
+[2022/12/20 16:01:53] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:01:53] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:01:53] ppcls INFO:                     order : 
+[2022/12/20 16:01:53] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:01:53] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:01:53] ppcls INFO:         loader : 
+[2022/12/20 16:01:53] ppcls INFO:             num_workers : 4
+[2022/12/20 16:01:53] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:01:53] ppcls INFO:         sampler : 
+[2022/12/20 16:01:53] ppcls INFO:             batch_size : 64
+[2022/12/20 16:01:53] ppcls INFO:             drop_last : False
+[2022/12/20 16:01:53] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:01:53] ppcls INFO:             shuffle : True
+[2022/12/20 16:01:53] ppcls INFO: Global : 
+[2022/12/20 16:01:53] ppcls INFO:     checkpoints : None
+[2022/12/20 16:01:53] ppcls INFO:     device : gpu
+[2022/12/20 16:01:53] ppcls INFO:     epochs : 10
+[2022/12/20 16:01:53] ppcls INFO:     eval_during_train : True
+[2022/12/20 16:01:53] ppcls INFO:     eval_interval : 1
+[2022/12/20 16:01:53] ppcls INFO:     image_shape : [3, 256, 192]
+[2022/12/20 16:01:53] ppcls INFO:     output_dir : ./output/
+[2022/12/20 16:01:53] ppcls INFO:     pretrained_model : None
+[2022/12/20 16:01:53] ppcls INFO:     print_batch_step : 10
+[2022/12/20 16:01:53] ppcls INFO:     save_inference_dir : ./inference
+[2022/12/20 16:01:53] ppcls INFO:     save_interval : 1
+[2022/12/20 16:01:53] ppcls INFO:     use_multilabel : True
+[2022/12/20 16:01:53] ppcls INFO:     use_visualdl : False
+[2022/12/20 16:01:53] ppcls INFO: Infer : 
+[2022/12/20 16:01:53] ppcls INFO:     PostProcess : 
+[2022/12/20 16:01:53] ppcls INFO:         class_id_map_file : None
+[2022/12/20 16:01:53] ppcls INFO:         name : MultiLabelTopk
+[2022/12/20 16:01:53] ppcls INFO:         topk : 5
+[2022/12/20 16:01:53] ppcls INFO:     batch_size : 10
+[2022/12/20 16:01:53] ppcls INFO:     infer_imgs : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/image/
+[2022/12/20 16:01:53] ppcls INFO:     transforms : 
+[2022/12/20 16:01:53] ppcls INFO:         DecodeImage : 
+[2022/12/20 16:01:53] ppcls INFO:             channel_first : False
+[2022/12/20 16:01:53] ppcls INFO:             to_rgb : True
+[2022/12/20 16:01:53] ppcls INFO:         ResizeImage : 
+[2022/12/20 16:01:53] ppcls INFO:             resize_short : 256
+[2022/12/20 16:01:53] ppcls INFO:         CropImage : 
+[2022/12/20 16:01:53] ppcls INFO:             size : [192, 256]
+[2022/12/20 16:01:53] ppcls INFO:         NormalizeImage : 
+[2022/12/20 16:01:53] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:01:53] ppcls INFO:             order : 
+[2022/12/20 16:01:53] ppcls INFO:             scale : 1.0/255.0
+[2022/12/20 16:01:53] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2022/12/20 16:01:53] ppcls INFO:         ToCHWImage : None
+[2022/12/20 16:01:53] ppcls INFO: Loss : 
+[2022/12/20 16:01:53] ppcls INFO:     Eval : 
+[2022/12/20 16:01:53] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:01:53] ppcls INFO:             weight : 1.0
+[2022/12/20 16:01:53] ppcls INFO:     Train : 
+[2022/12/20 16:01:53] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:01:53] ppcls INFO:             weight : 1.0
+[2022/12/20 16:01:53] ppcls INFO: Metric : 
+[2022/12/20 16:01:53] ppcls INFO:     Eval : 
+[2022/12/20 16:01:53] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:01:53] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:01:53] ppcls INFO:     Train : 
+[2022/12/20 16:01:53] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:01:53] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:01:53] ppcls INFO: Optimizer : 
+[2022/12/20 16:01:53] ppcls INFO:     lr : 
+[2022/12/20 16:01:53] ppcls INFO:         learning_rate : 0.1
+[2022/12/20 16:01:53] ppcls INFO:         name : Cosine
+[2022/12/20 16:01:53] ppcls INFO:     momentum : 0.9
+[2022/12/20 16:01:53] ppcls INFO:     name : Momentum
+[2022/12/20 16:01:53] ppcls INFO:     regularizer : 
+[2022/12/20 16:01:53] ppcls INFO:         coeff : 4e-05
+[2022/12/20 16:01:53] ppcls INFO:         name : L2
+[2022/12/20 16:01:53] ppcls INFO: train with paddle 2.2.2 and device CUDAPlace(0)
+[2022/12/20 16:02:19] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2022/12/20 16:02:19] ppcls INFO: Arch : 
+[2022/12/20 16:02:19] ppcls INFO:     class_num : 10
+[2022/12/20 16:02:19] ppcls INFO:     name : MobileNetV1
+[2022/12/20 16:02:19] ppcls INFO:     pretrained : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/best_model
+[2022/12/20 16:02:19] ppcls INFO: DataLoader : 
+[2022/12/20 16:02:19] ppcls INFO:     Eval : 
+[2022/12/20 16:02:19] ppcls INFO:         dataset : 
+[2022/12/20 16:02:19] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2022/12/20 16:02:19] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:02:19] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:02:19] ppcls INFO:             transform_ops : 
+[2022/12/20 16:02:19] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     channel_first : False
+[2022/12/20 16:02:19] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:02:19] ppcls INFO:                 ResizeImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     resize_short : 256
+[2022/12/20 16:02:19] ppcls INFO:                 CropImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:02:19] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:19] ppcls INFO:                     order : 
+[2022/12/20 16:02:19] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:02:19] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:19] ppcls INFO:         loader : 
+[2022/12/20 16:02:19] ppcls INFO:             num_workers : 4
+[2022/12/20 16:02:19] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:02:19] ppcls INFO:         sampler : 
+[2022/12/20 16:02:19] ppcls INFO:             batch_size : 64
+[2022/12/20 16:02:19] ppcls INFO:             drop_last : False
+[2022/12/20 16:02:19] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:02:19] ppcls INFO:             shuffle : False
+[2022/12/20 16:02:19] ppcls INFO:     Train : 
+[2022/12/20 16:02:19] ppcls INFO:         dataset : 
+[2022/12/20 16:02:19] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2022/12/20 16:02:19] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:02:19] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:02:19] ppcls INFO:             transform_ops : 
+[2022/12/20 16:02:19] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     channel_first : False
+[2022/12/20 16:02:19] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:02:19] ppcls INFO:                 RandCropImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:02:19] ppcls INFO:                 RandFlipImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     flip_code : 1
+[2022/12/20 16:02:19] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:02:19] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:19] ppcls INFO:                     order : 
+[2022/12/20 16:02:19] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:02:19] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:19] ppcls INFO:         loader : 
+[2022/12/20 16:02:19] ppcls INFO:             num_workers : 4
+[2022/12/20 16:02:19] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:02:19] ppcls INFO:         sampler : 
+[2022/12/20 16:02:19] ppcls INFO:             batch_size : 64
+[2022/12/20 16:02:19] ppcls INFO:             drop_last : False
+[2022/12/20 16:02:19] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:02:19] ppcls INFO:             shuffle : True
+[2022/12/20 16:02:19] ppcls INFO: Global : 
+[2022/12/20 16:02:19] ppcls INFO:     checkpoints : None
+[2022/12/20 16:02:19] ppcls INFO:     device : gpu
+[2022/12/20 16:02:19] ppcls INFO:     epochs : 10
+[2022/12/20 16:02:19] ppcls INFO:     eval_during_train : True
+[2022/12/20 16:02:19] ppcls INFO:     eval_interval : 1
+[2022/12/20 16:02:19] ppcls INFO:     image_shape : [3, 256, 192]
+[2022/12/20 16:02:19] ppcls INFO:     output_dir : ./output/
+[2022/12/20 16:02:19] ppcls INFO:     pretrained_model : None
+[2022/12/20 16:02:19] ppcls INFO:     print_batch_step : 10
+[2022/12/20 16:02:19] ppcls INFO:     save_inference_dir : ./inference
+[2022/12/20 16:02:19] ppcls INFO:     save_interval : 1
+[2022/12/20 16:02:19] ppcls INFO:     use_multilabel : True
+[2022/12/20 16:02:19] ppcls INFO:     use_visualdl : False
+[2022/12/20 16:02:19] ppcls INFO: Infer : 
+[2022/12/20 16:02:19] ppcls INFO:     PostProcess : 
+[2022/12/20 16:02:19] ppcls INFO:         class_id_map_file : None
+[2022/12/20 16:02:19] ppcls INFO:         name : MultiLabelTopk
+[2022/12/20 16:02:19] ppcls INFO:         topk : 5
+[2022/12/20 16:02:19] ppcls INFO:     batch_size : 10
+[2022/12/20 16:02:19] ppcls INFO:     infer_imgs : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/image/
+[2022/12/20 16:02:19] ppcls INFO:     transforms : 
+[2022/12/20 16:02:19] ppcls INFO:         DecodeImage : 
+[2022/12/20 16:02:19] ppcls INFO:             channel_first : False
+[2022/12/20 16:02:19] ppcls INFO:             to_rgb : True
+[2022/12/20 16:02:19] ppcls INFO:         ResizeImage : 
+[2022/12/20 16:02:19] ppcls INFO:             resize_short : 256
+[2022/12/20 16:02:19] ppcls INFO:         CropImage : 
+[2022/12/20 16:02:19] ppcls INFO:             size : [192, 256]
+[2022/12/20 16:02:19] ppcls INFO:         NormalizeImage : 
+[2022/12/20 16:02:19] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:19] ppcls INFO:             order : 
+[2022/12/20 16:02:19] ppcls INFO:             scale : 1.0/255.0
+[2022/12/20 16:02:19] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:19] ppcls INFO:         ToCHWImage : None
+[2022/12/20 16:02:19] ppcls INFO: Loss : 
+[2022/12/20 16:02:19] ppcls INFO:     Eval : 
+[2022/12/20 16:02:19] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:02:19] ppcls INFO:             weight : 1.0
+[2022/12/20 16:02:19] ppcls INFO:     Train : 
+[2022/12/20 16:02:19] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:02:19] ppcls INFO:             weight : 1.0
+[2022/12/20 16:02:19] ppcls INFO: Metric : 
+[2022/12/20 16:02:19] ppcls INFO:     Eval : 
+[2022/12/20 16:02:19] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:02:19] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:02:19] ppcls INFO:     Train : 
+[2022/12/20 16:02:19] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:02:19] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:02:19] ppcls INFO: Optimizer : 
+[2022/12/20 16:02:19] ppcls INFO:     lr : 
+[2022/12/20 16:02:19] ppcls INFO:         learning_rate : 0.1
+[2022/12/20 16:02:19] ppcls INFO:         name : Cosine
+[2022/12/20 16:02:19] ppcls INFO:     momentum : 0.9
+[2022/12/20 16:02:19] ppcls INFO:     name : Momentum
+[2022/12/20 16:02:19] ppcls INFO:     regularizer : 
+[2022/12/20 16:02:19] ppcls INFO:         coeff : 4e-05
+[2022/12/20 16:02:19] ppcls INFO:         name : L2
+[2022/12/20 16:02:19] ppcls INFO: train with paddle 2.2.2 and device CUDAPlace(0)
+[2022/12/20 16:02:31] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2022/12/20 16:02:31] ppcls INFO: Arch : 
+[2022/12/20 16:02:31] ppcls INFO:     class_num : 10
+[2022/12/20 16:02:31] ppcls INFO:     name : MobileNetV1
+[2022/12/20 16:02:31] ppcls INFO:     pretrained : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/best_model
+[2022/12/20 16:02:31] ppcls INFO: DataLoader : 
+[2022/12/20 16:02:31] ppcls INFO:     Eval : 
+[2022/12/20 16:02:31] ppcls INFO:         dataset : 
+[2022/12/20 16:02:31] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2022/12/20 16:02:31] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:02:31] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:02:31] ppcls INFO:             transform_ops : 
+[2022/12/20 16:02:31] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     channel_first : False
+[2022/12/20 16:02:31] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:02:31] ppcls INFO:                 ResizeImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     resize_short : 256
+[2022/12/20 16:02:31] ppcls INFO:                 CropImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:02:31] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:31] ppcls INFO:                     order : 
+[2022/12/20 16:02:31] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:02:31] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:31] ppcls INFO:         loader : 
+[2022/12/20 16:02:31] ppcls INFO:             num_workers : 4
+[2022/12/20 16:02:31] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:02:31] ppcls INFO:         sampler : 
+[2022/12/20 16:02:31] ppcls INFO:             batch_size : 64
+[2022/12/20 16:02:31] ppcls INFO:             drop_last : False
+[2022/12/20 16:02:31] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:02:31] ppcls INFO:             shuffle : False
+[2022/12/20 16:02:31] ppcls INFO:     Train : 
+[2022/12/20 16:02:31] ppcls INFO:         dataset : 
+[2022/12/20 16:02:31] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2022/12/20 16:02:31] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:02:31] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:02:31] ppcls INFO:             transform_ops : 
+[2022/12/20 16:02:31] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     channel_first : False
+[2022/12/20 16:02:31] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:02:31] ppcls INFO:                 RandCropImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:02:31] ppcls INFO:                 RandFlipImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     flip_code : 1
+[2022/12/20 16:02:31] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:02:31] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:31] ppcls INFO:                     order : 
+[2022/12/20 16:02:31] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:02:31] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:31] ppcls INFO:         loader : 
+[2022/12/20 16:02:31] ppcls INFO:             num_workers : 4
+[2022/12/20 16:02:31] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:02:31] ppcls INFO:         sampler : 
+[2022/12/20 16:02:31] ppcls INFO:             batch_size : 64
+[2022/12/20 16:02:31] ppcls INFO:             drop_last : False
+[2022/12/20 16:02:31] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:02:31] ppcls INFO:             shuffle : True
+[2022/12/20 16:02:31] ppcls INFO: Global : 
+[2022/12/20 16:02:31] ppcls INFO:     checkpoints : None
+[2022/12/20 16:02:31] ppcls INFO:     device : gpu
+[2022/12/20 16:02:31] ppcls INFO:     epochs : 10
+[2022/12/20 16:02:31] ppcls INFO:     eval_during_train : True
+[2022/12/20 16:02:31] ppcls INFO:     eval_interval : 1
+[2022/12/20 16:02:31] ppcls INFO:     image_shape : [3, 256, 192]
+[2022/12/20 16:02:31] ppcls INFO:     output_dir : ./output/
+[2022/12/20 16:02:31] ppcls INFO:     pretrained_model : None
+[2022/12/20 16:02:31] ppcls INFO:     print_batch_step : 10
+[2022/12/20 16:02:31] ppcls INFO:     save_inference_dir : ./inference
+[2022/12/20 16:02:31] ppcls INFO:     save_interval : 1
+[2022/12/20 16:02:31] ppcls INFO:     use_multilabel : True
+[2022/12/20 16:02:31] ppcls INFO:     use_visualdl : False
+[2022/12/20 16:02:31] ppcls INFO: Infer : 
+[2022/12/20 16:02:31] ppcls INFO:     PostProcess : 
+[2022/12/20 16:02:31] ppcls INFO:         class_id_map_file : None
+[2022/12/20 16:02:31] ppcls INFO:         name : MultiLabelTopk
+[2022/12/20 16:02:31] ppcls INFO:         topk : 5
+[2022/12/20 16:02:31] ppcls INFO:     batch_size : 10
+[2022/12/20 16:02:31] ppcls INFO:     infer_imgs : /media/minhssd/New Volume/work/Documents/thuy_dien_hoa_binh/detecUniform/data/image/
+[2022/12/20 16:02:31] ppcls INFO:     transforms : 
+[2022/12/20 16:02:31] ppcls INFO:         DecodeImage : 
+[2022/12/20 16:02:31] ppcls INFO:             channel_first : False
+[2022/12/20 16:02:31] ppcls INFO:             to_rgb : True
+[2022/12/20 16:02:31] ppcls INFO:         ResizeImage : 
+[2022/12/20 16:02:31] ppcls INFO:             resize_short : 256
+[2022/12/20 16:02:31] ppcls INFO:         CropImage : 
+[2022/12/20 16:02:31] ppcls INFO:             size : [192, 256]
+[2022/12/20 16:02:31] ppcls INFO:         NormalizeImage : 
+[2022/12/20 16:02:31] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:02:31] ppcls INFO:             order : 
+[2022/12/20 16:02:31] ppcls INFO:             scale : 1.0/255.0
+[2022/12/20 16:02:31] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2022/12/20 16:02:31] ppcls INFO:         ToCHWImage : None
+[2022/12/20 16:02:31] ppcls INFO: Loss : 
+[2022/12/20 16:02:31] ppcls INFO:     Eval : 
+[2022/12/20 16:02:31] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:02:31] ppcls INFO:             weight : 1.0
+[2022/12/20 16:02:31] ppcls INFO:     Train : 
+[2022/12/20 16:02:31] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:02:31] ppcls INFO:             weight : 1.0
+[2022/12/20 16:02:31] ppcls INFO: Metric : 
+[2022/12/20 16:02:31] ppcls INFO:     Eval : 
+[2022/12/20 16:02:31] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:02:31] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:02:31] ppcls INFO:     Train : 
+[2022/12/20 16:02:31] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:02:31] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:02:31] ppcls INFO: Optimizer : 
+[2022/12/20 16:02:31] ppcls INFO:     lr : 
+[2022/12/20 16:02:31] ppcls INFO:         learning_rate : 0.1
+[2022/12/20 16:02:31] ppcls INFO:         name : Cosine
+[2022/12/20 16:02:31] ppcls INFO:     momentum : 0.9
+[2022/12/20 16:02:31] ppcls INFO:     name : Momentum
+[2022/12/20 16:02:31] ppcls INFO:     regularizer : 
+[2022/12/20 16:02:31] ppcls INFO:         coeff : 4e-05
+[2022/12/20 16:02:31] ppcls INFO:         name : L2
+[2022/12/20 16:02:31] ppcls INFO: train with paddle 2.2.2 and device CUDAPlace(0)
+[2022/12/20 16:04:23] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2022/12/20 16:04:23] ppcls INFO: Arch : 
+[2022/12/20 16:04:23] ppcls INFO:     class_num : 10
+[2022/12/20 16:04:23] ppcls INFO:     name : MobileNetV1
+[2022/12/20 16:04:23] ppcls INFO:     pretrained : ../PaddleClas/data/best_model
+[2022/12/20 16:04:23] ppcls INFO: DataLoader : 
+[2022/12/20 16:04:23] ppcls INFO:     Eval : 
+[2022/12/20 16:04:23] ppcls INFO:         dataset : 
+[2022/12/20 16:04:23] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2022/12/20 16:04:23] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:04:23] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:04:23] ppcls INFO:             transform_ops : 
+[2022/12/20 16:04:23] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     channel_first : False
+[2022/12/20 16:04:23] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:04:23] ppcls INFO:                 ResizeImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     resize_short : 256
+[2022/12/20 16:04:23] ppcls INFO:                 CropImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:04:23] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:04:23] ppcls INFO:                     order : 
+[2022/12/20 16:04:23] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:04:23] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:04:23] ppcls INFO:         loader : 
+[2022/12/20 16:04:23] ppcls INFO:             num_workers : 4
+[2022/12/20 16:04:23] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:04:23] ppcls INFO:         sampler : 
+[2022/12/20 16:04:23] ppcls INFO:             batch_size : 64
+[2022/12/20 16:04:23] ppcls INFO:             drop_last : False
+[2022/12/20 16:04:23] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:04:23] ppcls INFO:             shuffle : False
+[2022/12/20 16:04:23] ppcls INFO:     Train : 
+[2022/12/20 16:04:23] ppcls INFO:         dataset : 
+[2022/12/20 16:04:23] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2022/12/20 16:04:23] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2022/12/20 16:04:23] ppcls INFO:             name : MultiLabelDataset
+[2022/12/20 16:04:23] ppcls INFO:             transform_ops : 
+[2022/12/20 16:04:23] ppcls INFO:                 DecodeImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     channel_first : False
+[2022/12/20 16:04:23] ppcls INFO:                     to_rgb : True
+[2022/12/20 16:04:23] ppcls INFO:                 RandCropImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     size : [192, 256]
+[2022/12/20 16:04:23] ppcls INFO:                 RandFlipImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     flip_code : 1
+[2022/12/20 16:04:23] ppcls INFO:                 NormalizeImage : 
+[2022/12/20 16:04:23] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:04:23] ppcls INFO:                     order : 
+[2022/12/20 16:04:23] ppcls INFO:                     scale : 1.0/255.0
+[2022/12/20 16:04:23] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2022/12/20 16:04:23] ppcls INFO:         loader : 
+[2022/12/20 16:04:23] ppcls INFO:             num_workers : 4
+[2022/12/20 16:04:23] ppcls INFO:             use_shared_memory : True
+[2022/12/20 16:04:23] ppcls INFO:         sampler : 
+[2022/12/20 16:04:23] ppcls INFO:             batch_size : 64
+[2022/12/20 16:04:23] ppcls INFO:             drop_last : False
+[2022/12/20 16:04:23] ppcls INFO:             name : DistributedBatchSampler
+[2022/12/20 16:04:23] ppcls INFO:             shuffle : True
+[2022/12/20 16:04:23] ppcls INFO: Global : 
+[2022/12/20 16:04:23] ppcls INFO:     checkpoints : None
+[2022/12/20 16:04:23] ppcls INFO:     device : gpu
+[2022/12/20 16:04:23] ppcls INFO:     epochs : 10
+[2022/12/20 16:04:23] ppcls INFO:     eval_during_train : True
+[2022/12/20 16:04:23] ppcls INFO:     eval_interval : 1
+[2022/12/20 16:04:23] ppcls INFO:     image_shape : [3, 256, 192]
+[2022/12/20 16:04:23] ppcls INFO:     output_dir : ./output/
+[2022/12/20 16:04:23] ppcls INFO:     pretrained_model : None
+[2022/12/20 16:04:23] ppcls INFO:     print_batch_step : 10
+[2022/12/20 16:04:23] ppcls INFO:     save_inference_dir : ./inference
+[2022/12/20 16:04:23] ppcls INFO:     save_interval : 1
+[2022/12/20 16:04:23] ppcls INFO:     use_multilabel : True
+[2022/12/20 16:04:23] ppcls INFO:     use_visualdl : False
+[2022/12/20 16:04:23] ppcls INFO: Infer : 
+[2022/12/20 16:04:23] ppcls INFO:     PostProcess : 
+[2022/12/20 16:04:23] ppcls INFO:         class_id_map_file : None
+[2022/12/20 16:04:23] ppcls INFO:         name : MultiLabelTopk
+[2022/12/20 16:04:23] ppcls INFO:         topk : 5
+[2022/12/20 16:04:23] ppcls INFO:     batch_size : 10
+[2022/12/20 16:04:23] ppcls INFO:     infer_imgs : ../PaddleClas/data/image/
+[2022/12/20 16:04:23] ppcls INFO:     transforms : 
+[2022/12/20 16:04:23] ppcls INFO:         DecodeImage : 
+[2022/12/20 16:04:23] ppcls INFO:             channel_first : False
+[2022/12/20 16:04:23] ppcls INFO:             to_rgb : True
+[2022/12/20 16:04:23] ppcls INFO:         ResizeImage : 
+[2022/12/20 16:04:23] ppcls INFO:             resize_short : 256
+[2022/12/20 16:04:23] ppcls INFO:         CropImage : 
+[2022/12/20 16:04:23] ppcls INFO:             size : [192, 256]
+[2022/12/20 16:04:23] ppcls INFO:         NormalizeImage : 
+[2022/12/20 16:04:23] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2022/12/20 16:04:23] ppcls INFO:             order : 
+[2022/12/20 16:04:23] ppcls INFO:             scale : 1.0/255.0
+[2022/12/20 16:04:23] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2022/12/20 16:04:23] ppcls INFO:         ToCHWImage : None
+[2022/12/20 16:04:23] ppcls INFO: Loss : 
+[2022/12/20 16:04:23] ppcls INFO:     Eval : 
+[2022/12/20 16:04:23] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:04:23] ppcls INFO:             weight : 1.0
+[2022/12/20 16:04:23] ppcls INFO:     Train : 
+[2022/12/20 16:04:23] ppcls INFO:         MultiLabelLoss : 
+[2022/12/20 16:04:23] ppcls INFO:             weight : 1.0
+[2022/12/20 16:04:23] ppcls INFO: Metric : 
+[2022/12/20 16:04:23] ppcls INFO:     Eval : 
+[2022/12/20 16:04:23] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:04:23] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:04:23] ppcls INFO:     Train : 
+[2022/12/20 16:04:23] ppcls INFO:         AccuracyScore : None
+[2022/12/20 16:04:23] ppcls INFO:         HammingDistance : None
+[2022/12/20 16:04:23] ppcls INFO: Optimizer : 
+[2022/12/20 16:04:23] ppcls INFO:     lr : 
+[2022/12/20 16:04:23] ppcls INFO:         learning_rate : 0.1
+[2022/12/20 16:04:23] ppcls INFO:         name : Cosine
+[2022/12/20 16:04:23] ppcls INFO:     momentum : 0.9
+[2022/12/20 16:04:23] ppcls INFO:     name : Momentum
+[2022/12/20 16:04:23] ppcls INFO:     regularizer : 
+[2022/12/20 16:04:23] ppcls INFO:         coeff : 4e-05
+[2022/12/20 16:04:23] ppcls INFO:         name : L2
+[2022/12/20 16:04:23] ppcls INFO: train with paddle 2.2.2 and device CUDAPlace(0)
+[2023/05/22 23:25:43] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2023/05/22 23:25:43] ppcls INFO: Arch : 
+[2023/05/22 23:25:43] ppcls INFO:     class_num : 10
+[2023/05/22 23:25:43] ppcls INFO:     name : MobileNetV1
+[2023/05/22 23:25:43] ppcls INFO:     pretrained : /home/evnadmin/Documents/weight/weight_paddle_class_v23/best_model
+[2023/05/22 23:25:43] ppcls INFO: DataLoader : 
+[2023/05/22 23:25:43] ppcls INFO:     Eval : 
+[2023/05/22 23:25:43] ppcls INFO:         dataset : 
+[2023/05/22 23:25:43] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2023/05/22 23:25:43] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/22 23:25:43] ppcls INFO:             name : MultiLabelDataset
+[2023/05/22 23:25:43] ppcls INFO:             transform_ops : 
+[2023/05/22 23:25:43] ppcls INFO:                 DecodeImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     channel_first : False
+[2023/05/22 23:25:43] ppcls INFO:                     to_rgb : True
+[2023/05/22 23:25:43] ppcls INFO:                 ResizeImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     resize_short : 256
+[2023/05/22 23:25:43] ppcls INFO:                 CropImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     size : [192, 256]
+[2023/05/22 23:25:43] ppcls INFO:                 NormalizeImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/22 23:25:43] ppcls INFO:                     order : 
+[2023/05/22 23:25:43] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/22 23:25:43] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/22 23:25:43] ppcls INFO:         loader : 
+[2023/05/22 23:25:43] ppcls INFO:             num_workers : 4
+[2023/05/22 23:25:43] ppcls INFO:             use_shared_memory : True
+[2023/05/22 23:25:43] ppcls INFO:         sampler : 
+[2023/05/22 23:25:43] ppcls INFO:             batch_size : 64
+[2023/05/22 23:25:43] ppcls INFO:             drop_last : False
+[2023/05/22 23:25:43] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/22 23:25:43] ppcls INFO:             shuffle : False
+[2023/05/22 23:25:43] ppcls INFO:     Train : 
+[2023/05/22 23:25:43] ppcls INFO:         dataset : 
+[2023/05/22 23:25:43] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2023/05/22 23:25:43] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/22 23:25:43] ppcls INFO:             name : MultiLabelDataset
+[2023/05/22 23:25:43] ppcls INFO:             transform_ops : 
+[2023/05/22 23:25:43] ppcls INFO:                 DecodeImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     channel_first : False
+[2023/05/22 23:25:43] ppcls INFO:                     to_rgb : True
+[2023/05/22 23:25:43] ppcls INFO:                 RandCropImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     size : [192, 256]
+[2023/05/22 23:25:43] ppcls INFO:                 RandFlipImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     flip_code : 1
+[2023/05/22 23:25:43] ppcls INFO:                 NormalizeImage : 
+[2023/05/22 23:25:43] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/22 23:25:43] ppcls INFO:                     order : 
+[2023/05/22 23:25:43] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/22 23:25:43] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/22 23:25:43] ppcls INFO:         loader : 
+[2023/05/22 23:25:43] ppcls INFO:             num_workers : 4
+[2023/05/22 23:25:43] ppcls INFO:             use_shared_memory : True
+[2023/05/22 23:25:43] ppcls INFO:         sampler : 
+[2023/05/22 23:25:43] ppcls INFO:             batch_size : 64
+[2023/05/22 23:25:43] ppcls INFO:             drop_last : False
+[2023/05/22 23:25:43] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/22 23:25:43] ppcls INFO:             shuffle : True
+[2023/05/22 23:25:43] ppcls INFO: Global : 
+[2023/05/22 23:25:43] ppcls INFO:     checkpoints : None
+[2023/05/22 23:25:43] ppcls INFO:     device : gpu
+[2023/05/22 23:25:43] ppcls INFO:     epochs : 10
+[2023/05/22 23:25:43] ppcls INFO:     eval_during_train : True
+[2023/05/22 23:25:43] ppcls INFO:     eval_interval : 1
+[2023/05/22 23:25:43] ppcls INFO:     image_shape : [3, 256, 192]
+[2023/05/22 23:25:43] ppcls INFO:     output_dir : ./output/
+[2023/05/22 23:25:43] ppcls INFO:     pretrained_model : None
+[2023/05/22 23:25:43] ppcls INFO:     print_batch_step : 10
+[2023/05/22 23:25:43] ppcls INFO:     save_inference_dir : ./inference
+[2023/05/22 23:25:43] ppcls INFO:     save_interval : 1
+[2023/05/22 23:25:43] ppcls INFO:     use_multilabel : True
+[2023/05/22 23:25:43] ppcls INFO:     use_visualdl : False
+[2023/05/22 23:25:43] ppcls INFO: Infer : 
+[2023/05/22 23:25:43] ppcls INFO:     PostProcess : 
+[2023/05/22 23:25:43] ppcls INFO:         class_id_map_file : None
+[2023/05/22 23:25:43] ppcls INFO:         name : MultiLabelTopk
+[2023/05/22 23:25:43] ppcls INFO:         topk : 5
+[2023/05/22 23:25:43] ppcls INFO:     batch_size : 30
+[2023/05/22 23:25:43] ppcls INFO:     infer_imgs : ./PaddleClas/data/image/
+[2023/05/22 23:25:43] ppcls INFO:     transforms : 
+[2023/05/22 23:25:43] ppcls INFO:         DecodeImage : 
+[2023/05/22 23:25:43] ppcls INFO:             channel_first : False
+[2023/05/22 23:25:43] ppcls INFO:             to_rgb : True
+[2023/05/22 23:25:43] ppcls INFO:         ResizeImage : 
+[2023/05/22 23:25:43] ppcls INFO:             resize_short : 256
+[2023/05/22 23:25:43] ppcls INFO:         CropImage : 
+[2023/05/22 23:25:43] ppcls INFO:             size : [192, 256]
+[2023/05/22 23:25:43] ppcls INFO:         NormalizeImage : 
+[2023/05/22 23:25:43] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2023/05/22 23:25:43] ppcls INFO:             order : 
+[2023/05/22 23:25:43] ppcls INFO:             scale : 1.0/255.0
+[2023/05/22 23:25:43] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2023/05/22 23:25:43] ppcls INFO:         ToCHWImage : None
+[2023/05/22 23:25:43] ppcls INFO: Loss : 
+[2023/05/22 23:25:43] ppcls INFO:     Eval : 
+[2023/05/22 23:25:43] ppcls INFO:         MultiLabelLoss : 
+[2023/05/22 23:25:43] ppcls INFO:             weight : 1.0
+[2023/05/22 23:25:43] ppcls INFO:     Train : 
+[2023/05/22 23:25:43] ppcls INFO:         MultiLabelLoss : 
+[2023/05/22 23:25:43] ppcls INFO:             weight : 1.0
+[2023/05/22 23:25:43] ppcls INFO: Metric : 
+[2023/05/22 23:25:43] ppcls INFO:     Eval : 
+[2023/05/22 23:25:43] ppcls INFO:         AccuracyScore : None
+[2023/05/22 23:25:43] ppcls INFO:         HammingDistance : None
+[2023/05/22 23:25:43] ppcls INFO:     Train : 
+[2023/05/22 23:25:43] ppcls INFO:         AccuracyScore : None
+[2023/05/22 23:25:43] ppcls INFO:         HammingDistance : None
+[2023/05/22 23:25:43] ppcls INFO: Optimizer : 
+[2023/05/22 23:25:43] ppcls INFO:     lr : 
+[2023/05/22 23:25:43] ppcls INFO:         learning_rate : 0.1
+[2023/05/22 23:25:43] ppcls INFO:         name : Cosine
+[2023/05/22 23:25:43] ppcls INFO:     momentum : 0.9
+[2023/05/22 23:25:43] ppcls INFO:     name : Momentum
+[2023/05/22 23:25:43] ppcls INFO:     regularizer : 
+[2023/05/22 23:25:43] ppcls INFO:         coeff : 4e-05
+[2023/05/22 23:25:43] ppcls INFO:         name : L2
+[2023/05/23 00:17:47] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2023/05/23 00:17:47] ppcls INFO: Arch : 
+[2023/05/23 00:17:47] ppcls INFO:     class_num : 10
+[2023/05/23 00:17:47] ppcls INFO:     name : MobileNetV1
+[2023/05/23 00:17:47] ppcls INFO:     pretrained : /home/evnadmin/Documents/weight/weight_paddle_class_v23/best_model
+[2023/05/23 00:17:47] ppcls INFO: DataLoader : 
+[2023/05/23 00:17:47] ppcls INFO:     Eval : 
+[2023/05/23 00:17:47] ppcls INFO:         dataset : 
+[2023/05/23 00:17:47] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2023/05/23 00:17:47] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 00:17:47] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 00:17:47] ppcls INFO:             transform_ops : 
+[2023/05/23 00:17:47] ppcls INFO:                 DecodeImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     channel_first : False
+[2023/05/23 00:17:47] ppcls INFO:                     to_rgb : True
+[2023/05/23 00:17:47] ppcls INFO:                 ResizeImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     resize_short : 256
+[2023/05/23 00:17:47] ppcls INFO:                 CropImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     size : [192, 256]
+[2023/05/23 00:17:47] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 00:17:47] ppcls INFO:                     order : 
+[2023/05/23 00:17:47] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 00:17:47] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 00:17:47] ppcls INFO:         loader : 
+[2023/05/23 00:17:47] ppcls INFO:             num_workers : 4
+[2023/05/23 00:17:47] ppcls INFO:             use_shared_memory : True
+[2023/05/23 00:17:47] ppcls INFO:         sampler : 
+[2023/05/23 00:17:47] ppcls INFO:             batch_size : 64
+[2023/05/23 00:17:47] ppcls INFO:             drop_last : False
+[2023/05/23 00:17:47] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 00:17:47] ppcls INFO:             shuffle : False
+[2023/05/23 00:17:47] ppcls INFO:     Train : 
+[2023/05/23 00:17:47] ppcls INFO:         dataset : 
+[2023/05/23 00:17:47] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2023/05/23 00:17:47] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 00:17:47] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 00:17:47] ppcls INFO:             transform_ops : 
+[2023/05/23 00:17:47] ppcls INFO:                 DecodeImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     channel_first : False
+[2023/05/23 00:17:47] ppcls INFO:                     to_rgb : True
+[2023/05/23 00:17:47] ppcls INFO:                 RandCropImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     size : [192, 256]
+[2023/05/23 00:17:47] ppcls INFO:                 RandFlipImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     flip_code : 1
+[2023/05/23 00:17:47] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 00:17:47] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 00:17:47] ppcls INFO:                     order : 
+[2023/05/23 00:17:47] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 00:17:47] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 00:17:47] ppcls INFO:         loader : 
+[2023/05/23 00:17:47] ppcls INFO:             num_workers : 4
+[2023/05/23 00:17:47] ppcls INFO:             use_shared_memory : True
+[2023/05/23 00:17:47] ppcls INFO:         sampler : 
+[2023/05/23 00:17:47] ppcls INFO:             batch_size : 64
+[2023/05/23 00:17:47] ppcls INFO:             drop_last : False
+[2023/05/23 00:17:47] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 00:17:47] ppcls INFO:             shuffle : True
+[2023/05/23 00:17:47] ppcls INFO: Global : 
+[2023/05/23 00:17:47] ppcls INFO:     checkpoints : None
+[2023/05/23 00:17:47] ppcls INFO:     device : gpu
+[2023/05/23 00:17:47] ppcls INFO:     epochs : 10
+[2023/05/23 00:17:47] ppcls INFO:     eval_during_train : True
+[2023/05/23 00:17:47] ppcls INFO:     eval_interval : 1
+[2023/05/23 00:17:47] ppcls INFO:     image_shape : [3, 256, 192]
+[2023/05/23 00:17:47] ppcls INFO:     output_dir : ./output/
+[2023/05/23 00:17:47] ppcls INFO:     pretrained_model : None
+[2023/05/23 00:17:47] ppcls INFO:     print_batch_step : 10
+[2023/05/23 00:17:47] ppcls INFO:     save_inference_dir : ./inference
+[2023/05/23 00:17:47] ppcls INFO:     save_interval : 1
+[2023/05/23 00:17:47] ppcls INFO:     use_multilabel : True
+[2023/05/23 00:17:47] ppcls INFO:     use_visualdl : False
+[2023/05/23 00:17:47] ppcls INFO: Infer : 
+[2023/05/23 00:17:47] ppcls INFO:     PostProcess : 
+[2023/05/23 00:17:47] ppcls INFO:         class_id_map_file : None
+[2023/05/23 00:17:47] ppcls INFO:         name : MultiLabelTopk
+[2023/05/23 00:17:47] ppcls INFO:         topk : 5
+[2023/05/23 00:17:47] ppcls INFO:     batch_size : 30
+[2023/05/23 00:17:47] ppcls INFO:     infer_imgs : ./PaddleClas/data/image/
+[2023/05/23 00:17:47] ppcls INFO:     transforms : 
+[2023/05/23 00:17:47] ppcls INFO:         DecodeImage : 
+[2023/05/23 00:17:47] ppcls INFO:             channel_first : False
+[2023/05/23 00:17:47] ppcls INFO:             to_rgb : True
+[2023/05/23 00:17:47] ppcls INFO:         ResizeImage : 
+[2023/05/23 00:17:47] ppcls INFO:             resize_short : 256
+[2023/05/23 00:17:47] ppcls INFO:         CropImage : 
+[2023/05/23 00:17:47] ppcls INFO:             size : [192, 256]
+[2023/05/23 00:17:47] ppcls INFO:         NormalizeImage : 
+[2023/05/23 00:17:47] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2023/05/23 00:17:47] ppcls INFO:             order : 
+[2023/05/23 00:17:47] ppcls INFO:             scale : 1.0/255.0
+[2023/05/23 00:17:47] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2023/05/23 00:17:47] ppcls INFO:         ToCHWImage : None
+[2023/05/23 00:17:47] ppcls INFO: Loss : 
+[2023/05/23 00:17:47] ppcls INFO:     Eval : 
+[2023/05/23 00:17:47] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 00:17:47] ppcls INFO:             weight : 1.0
+[2023/05/23 00:17:47] ppcls INFO:     Train : 
+[2023/05/23 00:17:47] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 00:17:47] ppcls INFO:             weight : 1.0
+[2023/05/23 00:17:47] ppcls INFO: Metric : 
+[2023/05/23 00:17:47] ppcls INFO:     Eval : 
+[2023/05/23 00:17:47] ppcls INFO:         AccuracyScore : None
+[2023/05/23 00:17:47] ppcls INFO:         HammingDistance : None
+[2023/05/23 00:17:47] ppcls INFO:     Train : 
+[2023/05/23 00:17:47] ppcls INFO:         AccuracyScore : None
+[2023/05/23 00:17:47] ppcls INFO:         HammingDistance : None
+[2023/05/23 00:17:47] ppcls INFO: Optimizer : 
+[2023/05/23 00:17:47] ppcls INFO:     lr : 
+[2023/05/23 00:17:47] ppcls INFO:         learning_rate : 0.1
+[2023/05/23 00:17:47] ppcls INFO:         name : Cosine
+[2023/05/23 00:17:47] ppcls INFO:     momentum : 0.9
+[2023/05/23 00:17:47] ppcls INFO:     name : Momentum
+[2023/05/23 00:17:47] ppcls INFO:     regularizer : 
+[2023/05/23 00:17:47] ppcls INFO:         coeff : 4e-05
+[2023/05/23 00:17:47] ppcls INFO:         name : L2
+[2023/05/23 00:17:47] ppcls INFO: train with paddle 2.3.2 and device Place(gpu:0)
+[2023/05/23 09:52:56] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2023/05/23 09:52:56] ppcls INFO: Arch : 
+[2023/05/23 09:52:56] ppcls INFO:     class_num : 10
+[2023/05/23 09:52:56] ppcls INFO:     name : MobileNetV1
+[2023/05/23 09:52:56] ppcls INFO:     pretrained : /home/evnadmin/Documents/weight/weight_paddle_class_v23/best_model
+[2023/05/23 09:52:56] ppcls INFO: DataLoader : 
+[2023/05/23 09:52:56] ppcls INFO:     Eval : 
+[2023/05/23 09:52:56] ppcls INFO:         dataset : 
+[2023/05/23 09:52:56] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2023/05/23 09:52:56] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:52:56] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:52:56] ppcls INFO:             transform_ops : 
+[2023/05/23 09:52:56] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     channel_first : False
+[2023/05/23 09:52:56] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:52:56] ppcls INFO:                 ResizeImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     resize_short : 256
+[2023/05/23 09:52:56] ppcls INFO:                 CropImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:52:56] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:52:56] ppcls INFO:                     order : 
+[2023/05/23 09:52:56] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:52:56] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:52:56] ppcls INFO:         loader : 
+[2023/05/23 09:52:56] ppcls INFO:             num_workers : 4
+[2023/05/23 09:52:56] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:52:56] ppcls INFO:         sampler : 
+[2023/05/23 09:52:56] ppcls INFO:             batch_size : 64
+[2023/05/23 09:52:56] ppcls INFO:             drop_last : False
+[2023/05/23 09:52:56] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:52:56] ppcls INFO:             shuffle : False
+[2023/05/23 09:52:56] ppcls INFO:     Train : 
+[2023/05/23 09:52:56] ppcls INFO:         dataset : 
+[2023/05/23 09:52:56] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2023/05/23 09:52:56] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:52:56] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:52:56] ppcls INFO:             transform_ops : 
+[2023/05/23 09:52:56] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     channel_first : False
+[2023/05/23 09:52:56] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:52:56] ppcls INFO:                 RandCropImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:52:56] ppcls INFO:                 RandFlipImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     flip_code : 1
+[2023/05/23 09:52:56] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:52:56] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:52:56] ppcls INFO:                     order : 
+[2023/05/23 09:52:56] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:52:56] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:52:56] ppcls INFO:         loader : 
+[2023/05/23 09:52:56] ppcls INFO:             num_workers : 4
+[2023/05/23 09:52:56] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:52:56] ppcls INFO:         sampler : 
+[2023/05/23 09:52:56] ppcls INFO:             batch_size : 64
+[2023/05/23 09:52:56] ppcls INFO:             drop_last : False
+[2023/05/23 09:52:56] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:52:56] ppcls INFO:             shuffle : True
+[2023/05/23 09:52:56] ppcls INFO: Global : 
+[2023/05/23 09:52:56] ppcls INFO:     checkpoints : None
+[2023/05/23 09:52:56] ppcls INFO:     device : gpu
+[2023/05/23 09:52:56] ppcls INFO:     epochs : 10
+[2023/05/23 09:52:56] ppcls INFO:     eval_during_train : True
+[2023/05/23 09:52:56] ppcls INFO:     eval_interval : 1
+[2023/05/23 09:52:56] ppcls INFO:     image_shape : [3, 256, 192]
+[2023/05/23 09:52:56] ppcls INFO:     output_dir : ./output/
+[2023/05/23 09:52:56] ppcls INFO:     pretrained_model : None
+[2023/05/23 09:52:56] ppcls INFO:     print_batch_step : 10
+[2023/05/23 09:52:56] ppcls INFO:     save_inference_dir : ./inference
+[2023/05/23 09:52:56] ppcls INFO:     save_interval : 1
+[2023/05/23 09:52:56] ppcls INFO:     use_multilabel : True
+[2023/05/23 09:52:56] ppcls INFO:     use_visualdl : False
+[2023/05/23 09:52:56] ppcls INFO: Infer : 
+[2023/05/23 09:52:56] ppcls INFO:     PostProcess : 
+[2023/05/23 09:52:56] ppcls INFO:         class_id_map_file : None
+[2023/05/23 09:52:56] ppcls INFO:         name : MultiLabelTopk
+[2023/05/23 09:52:56] ppcls INFO:         topk : 5
+[2023/05/23 09:52:56] ppcls INFO:     batch_size : 30
+[2023/05/23 09:52:56] ppcls INFO:     infer_imgs : ./PaddleClas/data/image/
+[2023/05/23 09:52:56] ppcls INFO:     transforms : 
+[2023/05/23 09:52:56] ppcls INFO:         DecodeImage : 
+[2023/05/23 09:52:56] ppcls INFO:             channel_first : False
+[2023/05/23 09:52:56] ppcls INFO:             to_rgb : True
+[2023/05/23 09:52:56] ppcls INFO:         ResizeImage : 
+[2023/05/23 09:52:56] ppcls INFO:             resize_short : 256
+[2023/05/23 09:52:56] ppcls INFO:         CropImage : 
+[2023/05/23 09:52:56] ppcls INFO:             size : [192, 256]
+[2023/05/23 09:52:56] ppcls INFO:         NormalizeImage : 
+[2023/05/23 09:52:56] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:52:56] ppcls INFO:             order : 
+[2023/05/23 09:52:56] ppcls INFO:             scale : 1.0/255.0
+[2023/05/23 09:52:56] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2023/05/23 09:52:56] ppcls INFO:         ToCHWImage : None
+[2023/05/23 09:52:56] ppcls INFO: Loss : 
+[2023/05/23 09:52:56] ppcls INFO:     Eval : 
+[2023/05/23 09:52:56] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:52:56] ppcls INFO:             weight : 1.0
+[2023/05/23 09:52:56] ppcls INFO:     Train : 
+[2023/05/23 09:52:56] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:52:56] ppcls INFO:             weight : 1.0
+[2023/05/23 09:52:56] ppcls INFO: Metric : 
+[2023/05/23 09:52:56] ppcls INFO:     Eval : 
+[2023/05/23 09:52:56] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:52:56] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:52:56] ppcls INFO:     Train : 
+[2023/05/23 09:52:56] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:52:56] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:52:56] ppcls INFO: Optimizer : 
+[2023/05/23 09:52:56] ppcls INFO:     lr : 
+[2023/05/23 09:52:56] ppcls INFO:         learning_rate : 0.1
+[2023/05/23 09:52:56] ppcls INFO:         name : Cosine
+[2023/05/23 09:52:56] ppcls INFO:     momentum : 0.9
+[2023/05/23 09:52:56] ppcls INFO:     name : Momentum
+[2023/05/23 09:52:56] ppcls INFO:     regularizer : 
+[2023/05/23 09:52:56] ppcls INFO:         coeff : 4e-05
+[2023/05/23 09:52:56] ppcls INFO:         name : L2
+[2023/05/23 09:52:56] ppcls INFO: train with paddle 2.3.2 and device Place(gpu:0)
+[2023/05/23 09:54:32] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2023/05/23 09:54:32] ppcls INFO: Arch : 
+[2023/05/23 09:54:32] ppcls INFO:     class_num : 10
+[2023/05/23 09:54:32] ppcls INFO:     name : MobileNetV1
+[2023/05/23 09:54:32] ppcls INFO:     pretrained : /home/evnadmin/Documents/AI_hoabinh/weight/weight_paddle_class_v23/best_model
+[2023/05/23 09:54:32] ppcls INFO: DataLoader : 
+[2023/05/23 09:54:32] ppcls INFO:     Eval : 
+[2023/05/23 09:54:32] ppcls INFO:         dataset : 
+[2023/05/23 09:54:32] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2023/05/23 09:54:32] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:54:32] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:54:32] ppcls INFO:             transform_ops : 
+[2023/05/23 09:54:32] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     channel_first : False
+[2023/05/23 09:54:32] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:54:32] ppcls INFO:                 ResizeImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     resize_short : 256
+[2023/05/23 09:54:32] ppcls INFO:                 CropImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:54:32] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:54:32] ppcls INFO:                     order : 
+[2023/05/23 09:54:32] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:54:32] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:54:32] ppcls INFO:         loader : 
+[2023/05/23 09:54:32] ppcls INFO:             num_workers : 4
+[2023/05/23 09:54:32] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:54:32] ppcls INFO:         sampler : 
+[2023/05/23 09:54:32] ppcls INFO:             batch_size : 64
+[2023/05/23 09:54:32] ppcls INFO:             drop_last : False
+[2023/05/23 09:54:32] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:54:32] ppcls INFO:             shuffle : False
+[2023/05/23 09:54:32] ppcls INFO:     Train : 
+[2023/05/23 09:54:32] ppcls INFO:         dataset : 
+[2023/05/23 09:54:32] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2023/05/23 09:54:32] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:54:32] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:54:32] ppcls INFO:             transform_ops : 
+[2023/05/23 09:54:32] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     channel_first : False
+[2023/05/23 09:54:32] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:54:32] ppcls INFO:                 RandCropImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:54:32] ppcls INFO:                 RandFlipImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     flip_code : 1
+[2023/05/23 09:54:32] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:54:32] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:54:32] ppcls INFO:                     order : 
+[2023/05/23 09:54:32] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:54:32] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:54:32] ppcls INFO:         loader : 
+[2023/05/23 09:54:32] ppcls INFO:             num_workers : 4
+[2023/05/23 09:54:32] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:54:32] ppcls INFO:         sampler : 
+[2023/05/23 09:54:32] ppcls INFO:             batch_size : 64
+[2023/05/23 09:54:32] ppcls INFO:             drop_last : False
+[2023/05/23 09:54:32] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:54:32] ppcls INFO:             shuffle : True
+[2023/05/23 09:54:32] ppcls INFO: Global : 
+[2023/05/23 09:54:32] ppcls INFO:     checkpoints : None
+[2023/05/23 09:54:32] ppcls INFO:     device : gpu
+[2023/05/23 09:54:32] ppcls INFO:     epochs : 10
+[2023/05/23 09:54:32] ppcls INFO:     eval_during_train : True
+[2023/05/23 09:54:32] ppcls INFO:     eval_interval : 1
+[2023/05/23 09:54:32] ppcls INFO:     image_shape : [3, 256, 192]
+[2023/05/23 09:54:32] ppcls INFO:     output_dir : ./output/
+[2023/05/23 09:54:32] ppcls INFO:     pretrained_model : None
+[2023/05/23 09:54:32] ppcls INFO:     print_batch_step : 10
+[2023/05/23 09:54:32] ppcls INFO:     save_inference_dir : ./inference
+[2023/05/23 09:54:32] ppcls INFO:     save_interval : 1
+[2023/05/23 09:54:32] ppcls INFO:     use_multilabel : True
+[2023/05/23 09:54:32] ppcls INFO:     use_visualdl : False
+[2023/05/23 09:54:32] ppcls INFO: Infer : 
+[2023/05/23 09:54:32] ppcls INFO:     PostProcess : 
+[2023/05/23 09:54:32] ppcls INFO:         class_id_map_file : None
+[2023/05/23 09:54:32] ppcls INFO:         name : MultiLabelTopk
+[2023/05/23 09:54:32] ppcls INFO:         topk : 5
+[2023/05/23 09:54:32] ppcls INFO:     batch_size : 30
+[2023/05/23 09:54:32] ppcls INFO:     infer_imgs : ./PaddleClas/data/image/
+[2023/05/23 09:54:32] ppcls INFO:     transforms : 
+[2023/05/23 09:54:32] ppcls INFO:         DecodeImage : 
+[2023/05/23 09:54:32] ppcls INFO:             channel_first : False
+[2023/05/23 09:54:32] ppcls INFO:             to_rgb : True
+[2023/05/23 09:54:32] ppcls INFO:         ResizeImage : 
+[2023/05/23 09:54:32] ppcls INFO:             resize_short : 256
+[2023/05/23 09:54:32] ppcls INFO:         CropImage : 
+[2023/05/23 09:54:32] ppcls INFO:             size : [192, 256]
+[2023/05/23 09:54:32] ppcls INFO:         NormalizeImage : 
+[2023/05/23 09:54:32] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:54:32] ppcls INFO:             order : 
+[2023/05/23 09:54:32] ppcls INFO:             scale : 1.0/255.0
+[2023/05/23 09:54:32] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2023/05/23 09:54:32] ppcls INFO:         ToCHWImage : None
+[2023/05/23 09:54:32] ppcls INFO: Loss : 
+[2023/05/23 09:54:32] ppcls INFO:     Eval : 
+[2023/05/23 09:54:32] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:54:32] ppcls INFO:             weight : 1.0
+[2023/05/23 09:54:32] ppcls INFO:     Train : 
+[2023/05/23 09:54:32] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:54:32] ppcls INFO:             weight : 1.0
+[2023/05/23 09:54:32] ppcls INFO: Metric : 
+[2023/05/23 09:54:32] ppcls INFO:     Eval : 
+[2023/05/23 09:54:32] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:54:32] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:54:32] ppcls INFO:     Train : 
+[2023/05/23 09:54:32] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:54:32] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:54:32] ppcls INFO: Optimizer : 
+[2023/05/23 09:54:32] ppcls INFO:     lr : 
+[2023/05/23 09:54:32] ppcls INFO:         learning_rate : 0.1
+[2023/05/23 09:54:32] ppcls INFO:         name : Cosine
+[2023/05/23 09:54:32] ppcls INFO:     momentum : 0.9
+[2023/05/23 09:54:32] ppcls INFO:     name : Momentum
+[2023/05/23 09:54:32] ppcls INFO:     regularizer : 
+[2023/05/23 09:54:32] ppcls INFO:         coeff : 4e-05
+[2023/05/23 09:54:32] ppcls INFO:         name : L2
+[2023/05/23 09:54:33] ppcls INFO: train with paddle 2.3.2 and device Place(gpu:0)
+[2023/05/23 09:55:12] ppcls INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+[2023/05/23 09:55:12] ppcls INFO: Arch : 
+[2023/05/23 09:55:12] ppcls INFO:     class_num : 10
+[2023/05/23 09:55:12] ppcls INFO:     name : MobileNetV1
+[2023/05/23 09:55:12] ppcls INFO:     pretrained : /home/evnadmin/Documents/AI_hoabinh/weight/weight_paddle_class_v23/best_model
+[2023/05/23 09:55:12] ppcls INFO: DataLoader : 
+[2023/05/23 09:55:12] ppcls INFO:     Eval : 
+[2023/05/23 09:55:12] ppcls INFO:         dataset : 
+[2023/05/23 09:55:12] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/val_list.txt
+[2023/05/23 09:55:12] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:55:12] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:55:12] ppcls INFO:             transform_ops : 
+[2023/05/23 09:55:12] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     channel_first : False
+[2023/05/23 09:55:12] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:55:12] ppcls INFO:                 ResizeImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     resize_short : 256
+[2023/05/23 09:55:12] ppcls INFO:                 CropImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:55:12] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:55:12] ppcls INFO:                     order : 
+[2023/05/23 09:55:12] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:55:12] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:55:12] ppcls INFO:         loader : 
+[2023/05/23 09:55:12] ppcls INFO:             num_workers : 4
+[2023/05/23 09:55:12] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:55:12] ppcls INFO:         sampler : 
+[2023/05/23 09:55:12] ppcls INFO:             batch_size : 64
+[2023/05/23 09:55:12] ppcls INFO:             drop_last : False
+[2023/05/23 09:55:12] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:55:12] ppcls INFO:             shuffle : False
+[2023/05/23 09:55:12] ppcls INFO:     Train : 
+[2023/05/23 09:55:12] ppcls INFO:         dataset : 
+[2023/05/23 09:55:12] ppcls INFO:             cls_label_path : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/train_list.txt
+[2023/05/23 09:55:12] ppcls INFO:             image_root : /content/drive/MyDrive/phuong/PaddleClas_MobilenetV1/PaddleClas/dataset/tong/
+[2023/05/23 09:55:12] ppcls INFO:             name : MultiLabelDataset
+[2023/05/23 09:55:12] ppcls INFO:             transform_ops : 
+[2023/05/23 09:55:12] ppcls INFO:                 DecodeImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     channel_first : False
+[2023/05/23 09:55:12] ppcls INFO:                     to_rgb : True
+[2023/05/23 09:55:12] ppcls INFO:                 RandCropImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     size : [192, 256]
+[2023/05/23 09:55:12] ppcls INFO:                 RandFlipImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     flip_code : 1
+[2023/05/23 09:55:12] ppcls INFO:                 NormalizeImage : 
+[2023/05/23 09:55:12] ppcls INFO:                     mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:55:12] ppcls INFO:                     order : 
+[2023/05/23 09:55:12] ppcls INFO:                     scale : 1.0/255.0
+[2023/05/23 09:55:12] ppcls INFO:                     std : [0.229, 0.224, 0.225]
+[2023/05/23 09:55:12] ppcls INFO:         loader : 
+[2023/05/23 09:55:12] ppcls INFO:             num_workers : 4
+[2023/05/23 09:55:12] ppcls INFO:             use_shared_memory : True
+[2023/05/23 09:55:12] ppcls INFO:         sampler : 
+[2023/05/23 09:55:12] ppcls INFO:             batch_size : 64
+[2023/05/23 09:55:12] ppcls INFO:             drop_last : False
+[2023/05/23 09:55:12] ppcls INFO:             name : DistributedBatchSampler
+[2023/05/23 09:55:12] ppcls INFO:             shuffle : True
+[2023/05/23 09:55:12] ppcls INFO: Global : 
+[2023/05/23 09:55:12] ppcls INFO:     checkpoints : None
+[2023/05/23 09:55:12] ppcls INFO:     device : gpu
+[2023/05/23 09:55:12] ppcls INFO:     epochs : 10
+[2023/05/23 09:55:12] ppcls INFO:     eval_during_train : True
+[2023/05/23 09:55:12] ppcls INFO:     eval_interval : 1
+[2023/05/23 09:55:12] ppcls INFO:     image_shape : [3, 256, 192]
+[2023/05/23 09:55:12] ppcls INFO:     output_dir : ./output/
+[2023/05/23 09:55:12] ppcls INFO:     pretrained_model : None
+[2023/05/23 09:55:12] ppcls INFO:     print_batch_step : 10
+[2023/05/23 09:55:12] ppcls INFO:     save_inference_dir : ./inference
+[2023/05/23 09:55:12] ppcls INFO:     save_interval : 1
+[2023/05/23 09:55:12] ppcls INFO:     use_multilabel : True
+[2023/05/23 09:55:12] ppcls INFO:     use_visualdl : False
+[2023/05/23 09:55:12] ppcls INFO: Infer : 
+[2023/05/23 09:55:12] ppcls INFO:     PostProcess : 
+[2023/05/23 09:55:12] ppcls INFO:         class_id_map_file : None
+[2023/05/23 09:55:12] ppcls INFO:         name : MultiLabelTopk
+[2023/05/23 09:55:12] ppcls INFO:         topk : 5
+[2023/05/23 09:55:12] ppcls INFO:     batch_size : 30
+[2023/05/23 09:55:12] ppcls INFO:     infer_imgs : /home/evnadmin/Documents/AI_hoabinh/yoloHubLoad/PaddleClas/data/image/
+[2023/05/23 09:55:12] ppcls INFO:     transforms : 
+[2023/05/23 09:55:12] ppcls INFO:         DecodeImage : 
+[2023/05/23 09:55:12] ppcls INFO:             channel_first : False
+[2023/05/23 09:55:12] ppcls INFO:             to_rgb : True
+[2023/05/23 09:55:12] ppcls INFO:         ResizeImage : 
+[2023/05/23 09:55:12] ppcls INFO:             resize_short : 256
+[2023/05/23 09:55:12] ppcls INFO:         CropImage : 
+[2023/05/23 09:55:12] ppcls INFO:             size : [192, 256]
+[2023/05/23 09:55:12] ppcls INFO:         NormalizeImage : 
+[2023/05/23 09:55:12] ppcls INFO:             mean : [0.485, 0.456, 0.406]
+[2023/05/23 09:55:12] ppcls INFO:             order : 
+[2023/05/23 09:55:12] ppcls INFO:             scale : 1.0/255.0
+[2023/05/23 09:55:12] ppcls INFO:             std : [0.229, 0.224, 0.225]
+[2023/05/23 09:55:12] ppcls INFO:         ToCHWImage : None
+[2023/05/23 09:55:12] ppcls INFO: Loss : 
+[2023/05/23 09:55:12] ppcls INFO:     Eval : 
+[2023/05/23 09:55:12] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:55:12] ppcls INFO:             weight : 1.0
+[2023/05/23 09:55:12] ppcls INFO:     Train : 
+[2023/05/23 09:55:12] ppcls INFO:         MultiLabelLoss : 
+[2023/05/23 09:55:12] ppcls INFO:             weight : 1.0
+[2023/05/23 09:55:12] ppcls INFO: Metric : 
+[2023/05/23 09:55:12] ppcls INFO:     Eval : 
+[2023/05/23 09:55:12] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:55:12] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:55:12] ppcls INFO:     Train : 
+[2023/05/23 09:55:12] ppcls INFO:         AccuracyScore : None
+[2023/05/23 09:55:12] ppcls INFO:         HammingDistance : None
+[2023/05/23 09:55:12] ppcls INFO: Optimizer : 
+[2023/05/23 09:55:12] ppcls INFO:     lr : 
+[2023/05/23 09:55:12] ppcls INFO:         learning_rate : 0.1
+[2023/05/23 09:55:12] ppcls INFO:         name : Cosine
+[2023/05/23 09:55:12] ppcls INFO:     momentum : 0.9
+[2023/05/23 09:55:12] ppcls INFO:     name : Momentum
+[2023/05/23 09:55:12] ppcls INFO:     regularizer : 
+[2023/05/23 09:55:12] ppcls INFO:         coeff : 4e-05
+[2023/05/23 09:55:12] ppcls INFO:         name : L2
+[2023/05/23 09:55:12] ppcls INFO: train with paddle 2.3.2 and device Place(gpu:0)

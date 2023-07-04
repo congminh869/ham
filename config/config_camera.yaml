@@ -1,0 +1,8 @@
+mode: 
+  number: 0
+
+num_camera:
+  number: 1
+
+filename_video:
+  path: "/home/mq/disk2T/son/dataHoaBinh/NVR_ch3_main_20230219140000_20230219150000.mp4"

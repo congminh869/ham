@@ -1,0 +1,24 @@
+weights_person: #yolo_person
+  weights: 'weight/person/crowdhuman_yolov5m.pt'
+  classes: 0
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.7
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+  engine: False
+
+#yolo_hat
+weights_hat:
+  weights: 'weight/Hat/best_Hat.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+
+device:
+  device: 0

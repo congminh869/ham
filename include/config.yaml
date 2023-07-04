@@ -1,0 +1,70 @@
+weights_person: #yolo_person
+  weights: './weight/crowdhuman_yolov5m.pt'
+  classes: 0
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_FS
+weights_FS:
+  weights: './weight/fire_smoke.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_hat
+weights_hat:
+  weights: './weight/best_Hat.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_vehicle
+weights_vehicle:
+  weights: './weight/only_vehical_150epoch.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+
+#yolo_HVS
+weights_HVS:
+  weights: './weight/high_volt_switch_200epoch5s.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_belt
+weights_belt:
+  weights: './weight/detect_belt.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
+#yolo_clock
+weights_clock:
+  weights: './weight/I_O_5x.pt'
+  classes: null
+  device: 0
+  iou_thres: 0.4
+  conf_thres: 0.5
+  img_size: 640
+  max_det: 1000
+  agnostic_nms: False
